@@ -10,3 +10,15 @@ C:\Users\osman.ban\Documents\git-Baris\-Examples\DevProje\Projem\obj\Debug\Proje
 C:\Users\osman.ban\Documents\git-Baris\-Examples\DevProje\Projem\obj\Debug\Projem.pdb
 C:\Users\osman.ban\Documents\git-Baris\-Examples\DevProje\Projem\obj\Debug\Projem.FormUserSettings.resources
 C:\Users\osman.ban\Documents\git-Baris\-Examples\DevProje\Projem\obj\Debug\Projem.csprojResolveAssemblyReference.cache
+C:\Users\osman.ban\Documents\git-Baris\Kurtarma\Kurtarma\DevProje\Projem\bin\Debug\Projem.exe.config
+C:\Users\osman.ban\Documents\git-Baris\Kurtarma\Kurtarma\DevProje\Projem\obj\Debug\Projem.exe
+C:\Users\osman.ban\Documents\git-Baris\Kurtarma\Kurtarma\DevProje\Projem\obj\Debug\Projem.pdb
+C:\Users\osman.ban\Documents\git-Baris\Kurtarma\Kurtarma\DevProje\Projem\obj\Debug\Projem.csprojResolveAssemblyReference.cache
+C:\Users\osman.ban\Documents\git-Baris\Kurtarma\Kurtarma\DevProje\Projem\obj\Debug\Projem.FormCreateUser.resources
+C:\Users\osman.ban\Documents\git-Baris\Kurtarma\Kurtarma\DevProje\Projem\obj\Debug\Projem.FormLogin.resources
+C:\Users\osman.ban\Documents\git-Baris\Kurtarma\Kurtarma\DevProje\Projem\obj\Debug\Projem.FormMain.resources
+C:\Users\osman.ban\Documents\git-Baris\Kurtarma\Kurtarma\DevProje\Projem\obj\Debug\Projem.FormUserSettings.resources
+C:\Users\osman.ban\Documents\git-Baris\Kurtarma\Kurtarma\DevProje\Projem\obj\Debug\Projem.Properties.Resources.resources
+C:\Users\osman.ban\Documents\git-Baris\Kurtarma\Kurtarma\DevProje\Projem\obj\Debug\Projem.csproj.GenerateResource.Cache
+C:\Users\osman.ban\Documents\git-Baris\Kurtarma\Kurtarma\DevProje\Projem\bin\Debug\Projem.exe
+C:\Users\osman.ban\Documents\git-Baris\Kurtarma\Kurtarma\DevProje\Projem\bin\Debug\Projem.pdb

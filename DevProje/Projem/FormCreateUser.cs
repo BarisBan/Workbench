@@ -64,10 +64,11 @@ namespace Projem
 
         }
 
-        bool check = false; // bu değer True olursa Kayıt butonu çalışıcak. yoksa mesaj vericek
         private void btBaglan_Click(object sender, EventArgs e)
         {
-            // tel için ayrı metod uygulayacağım.
+            #region  Kontroller
+            bool check = false; // bu değer True olursa Kayıt butonu çalışıcak. yoksa mesaj vericek
+
             Helper helper = new Helper();
             string ad = txbNewFirstName.Text;
             string soyad = txbNewLastName.Text;
@@ -79,6 +80,35 @@ namespace Projem
 
             //email Konntrolü
 
+            //isim soyisim kontrolü
+            check = helper.TextController(ad, soyad);
+            if (check == false)
+            {
+
+                return;
+            }
+            // user pass kontrolü
+            check = helper.TextController(user, pass);
+            if (check == false)
+            {
+                return;
+            }
+            // userin veritabanındaki kontrolü
+            check = helper.UserController(user);
+            if (check == false)
+            {
+
+                return;
+            }
+
+            //tel kontrolü
+            check = helper.PhoneController(tel);
+            if (check == false)
+            {
+                MessageBox.Show("Girdiğiniz telefon numarası geçersiz ", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            // mail adres kontroü
             check = helper.MailIsAccept(txbEmail.Text);
             if (check)
             {
@@ -104,8 +134,14 @@ namespace Projem
                 check = true;
             }
 
-            // Kullanıcı Adı kontrolü 
+            //doğum tarihi kontrolü
+            check = helper.DateController(birthday);
+            if (check == false)
+            {
+                return;
+            }
 
+            // şifre/şifretekrar kontrolü 
             if (pass != passcheck)
             {
                 MessageBox.Show("Girdiğiniz (Şifre/Şifre Tekrar) Uyumsuz ", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -114,47 +150,21 @@ namespace Projem
             }
             else
             {
+
                 check = true;
             }
-
-            //isim soyisim tel kontrolü
-            check = helper.TextController(ad, soyad);
-            if (check == false)
-            {
-
-                return;
-            }
-
-            // user psaa kontroll
-
-            check = helper.UserController(user);
-            if (check  == false)
-            {
-
-                return;
-            }
-
-            //tel kontrolü
-            check = helper.PhoneController(tel);
-            if (check== false)
-            {
-                MessageBox.Show("Girdiğiniz telefon numarası geçersiz ", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-
-            //doğum tarihi kontrolü
-            check = helper.DateController(birthday);
-            if (check == false)
-            {
-                return;
-            }
-
             // kontroller uygunsa Veritabanına atılacak            
             if (check == true)
             {
-                MessageBox.Show("Sonunda Kontrol Bitii Check true kaldı", "YESSSSSSS", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+                MessageBox.Show("Kaydınız işleme alınmıştır. İşlem tamamlandığında bilgilendiriliceksiniz", "Kayıt Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+
             }
 
+            #endregion
+            
+                
         }
 
         private void label2_Click(object sender, EventArgs e)

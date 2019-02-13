@@ -28,7 +28,9 @@ namespace Projem
 
             return loginString;
         }
-
-
+        internal static string CreateNewUserString(string ad, string? orta, string soyad,)
+        {
+            Insert into NewUser values('ali', null, 'ali', null, null, null, null, null, null, null)
+        }
     }
 }

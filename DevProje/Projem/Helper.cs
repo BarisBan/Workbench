@@ -30,7 +30,7 @@ namespace Projem
         {
             bool uygunluk = false;
 
-            if (ad.Trim() == " " && soyad.Trim() == " ")
+            if (ad.Trim() == "" && soyad.Trim() == "")
             {
                 MessageBox.Show("Lütfen Bütün Bilgileri Doldurunuz !", "Uyarı !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 uygunluk = false;
@@ -47,8 +47,6 @@ namespace Projem
         public bool UserController(string user)
         {
             bool uygunluk = false;
-
-
             SqlConnection connect = new SqlConnection(ConnectionHelper.GetConnectionString());
             connect.Open();
 
