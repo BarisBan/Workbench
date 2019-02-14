@@ -13,8 +13,7 @@ namespace Projem
 {
     public partial class FormCreateUser : Form
     {
-        string connString = ConnectionHelper.GetConnectionString();
-        SqlConnection connect;
+        
         public FormCreateUser()
         {
             InitializeComponent();
@@ -22,7 +21,7 @@ namespace Projem
 
         private void btnKayıtOl_Click(object sender, EventArgs e)
         {
-            connect = new SqlConnection(connString);
+            SqlConnection connect = new SqlConnection(ConnectionHelper.GetConnectionString());
             connect.Open();
 
             // Öncelikle Kullanıcı Adı uygunmu değilmi şifre uygunmu değil mi bak
@@ -44,25 +43,7 @@ namespace Projem
 
         }
 
-        private void FormCreateUser_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'm303SalesDBDataSet.Cities' table. You can move, or remove it, as needed.
-            this.citiesTableAdapter.Fill(this.m303SalesDBDataSet.Cities);
-
-        }
-
-        private void fillByToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.citiesTableAdapter.FillBy(this.m303SalesDBDataSet.Cities);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
+       
 
         private void btBaglan_Click(object sender, EventArgs e)
         {
@@ -169,9 +150,9 @@ namespace Projem
             {
 
                 MessageBox.Show("Kaydınız işleme alınmıştır. İşlem tamamlandığında bilgilendiriliceksiniz", "Kayıt Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
                     SqlConnection connect = new SqlConnection(ConnectionHelper.GetConnectionString());
                     connect.Open();
-
                 try
                 {
                     byte yetki = 0;
@@ -191,6 +172,10 @@ namespace Projem
                    
                 }
                 connect.Close();
+
+                Helper.OpenNewFormMain();
+                this.Hide();
+                
             }
             
                 
@@ -199,6 +184,12 @@ namespace Projem
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Helper.OpenNewFormMain();
+            this.Hide();
         }
     }
 }

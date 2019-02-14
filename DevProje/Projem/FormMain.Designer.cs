@@ -75,8 +75,9 @@
             // 
             this.hakkındaToolStripMenuItem.BackColor = System.Drawing.Color.SteelBlue;
             this.hakkındaToolStripMenuItem.Name = "hakkındaToolStripMenuItem";
-            this.hakkındaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.hakkındaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.hakkındaToolStripMenuItem.Text = "Hakkında";
+            this.hakkındaToolStripMenuItem.Click += new System.EventHandler(this.hakkındaToolStripMenuItem_Click);
             // 
             // ayarlarToolStripMenuItem
             // 
@@ -87,7 +88,7 @@
             this.şubelerToolStripMenuItem});
             this.ayarlarToolStripMenuItem.Enabled = false;
             this.ayarlarToolStripMenuItem.Name = "ayarlarToolStripMenuItem";
-            this.ayarlarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ayarlarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ayarlarToolStripMenuItem.Text = "Ayarlar";
             this.ayarlarToolStripMenuItem.Click += new System.EventHandler(this.ayarlarToolStripMenuItem_Click);
             // 
@@ -95,7 +96,7 @@
             // 
             this.kullanıcılarToolStripMenuItem.BackColor = System.Drawing.Color.SteelBlue;
             this.kullanıcılarToolStripMenuItem.Name = "kullanıcılarToolStripMenuItem";
-            this.kullanıcılarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.kullanıcılarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.kullanıcılarToolStripMenuItem.Text = "Kullanıcılar";
             this.kullanıcılarToolStripMenuItem.Click += new System.EventHandler(this.kullanıcılarToolStripMenuItem_Click);
             // 
@@ -103,21 +104,21 @@
             // 
             this.ürünlerToolStripMenuItem.BackColor = System.Drawing.Color.SteelBlue;
             this.ürünlerToolStripMenuItem.Name = "ürünlerToolStripMenuItem";
-            this.ürünlerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ürünlerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ürünlerToolStripMenuItem.Text = "Ürünler";
             // 
             // şubelerToolStripMenuItem
             // 
             this.şubelerToolStripMenuItem.BackColor = System.Drawing.Color.SteelBlue;
             this.şubelerToolStripMenuItem.Name = "şubelerToolStripMenuItem";
-            this.şubelerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.şubelerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.şubelerToolStripMenuItem.Text = "Şubeler";
             // 
             // çıkışToolStripMenuItem
             // 
             this.çıkışToolStripMenuItem.BackColor = System.Drawing.Color.SteelBlue;
             this.çıkışToolStripMenuItem.Name = "çıkışToolStripMenuItem";
-            this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.çıkışToolStripMenuItem.Text = "Çıkış";
             this.çıkışToolStripMenuItem.Click += new System.EventHandler(this.çıkışToolStripMenuItem_Click);
             // 
@@ -135,7 +136,7 @@
             // 
             this.loginToolStripMenuItem.BackColor = System.Drawing.Color.SteelBlue;
             this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
-            this.loginToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.loginToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.loginToolStripMenuItem.Text = "Login";
             this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
             // 
@@ -143,7 +144,7 @@
             // 
             this.logOutToolStripMenuItem.BackColor = System.Drawing.Color.SteelBlue;
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.logOutToolStripMenuItem.Text = "LogOut";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
@@ -160,6 +161,7 @@
             this.stockToolStripMenuItem.Name = "stockToolStripMenuItem";
             this.stockToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.stockToolStripMenuItem.Text = "Stock";
+            this.stockToolStripMenuItem.Click += new System.EventHandler(this.stockToolStripMenuItem_Click);
             // 
             // raporlarToolStripMenuItem
             // 

@@ -19,30 +19,32 @@ namespace Projem
 
         private void btCreateUser_Click(object sender, EventArgs e)
         {
-            FormNewUser formNewUser = new FormNewUser();
-            formNewUser.Show();
+            Helper.OpenNewFormNewUser();
             this.Hide();
         }
 
         private void btDeleteUser_Click(object sender, EventArgs e)
         {
-            FormDeleteUser formDeleteUser = new FormDeleteUser();
-            formDeleteUser.Show();
+            Helper.OpenNewFormDeleteUser();
             this.Hide();
 
         }
 
         private void btUpdateUser_Click(object sender, EventArgs e)
         {
-            FormUserUpdate formUserUpdate = new FormUserUpdate();
-            formUserUpdate.Show();
+            Helper.OpenNewFormUserUdate();
             this.Hide();
 
         }
 
         private void btExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Helper.OpenNewFormMain();
+            this.Hide();
+        }
+
+        private void FormUserSettings_Load(object sender, EventArgs e)
+        {
 
         }
     }

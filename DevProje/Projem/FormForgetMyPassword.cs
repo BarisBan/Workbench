@@ -39,6 +39,14 @@ namespace Projem
             }
             connect.Close();
 
+
+           
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Helper.OpenNewFormMain();
+            this.Hide();
         }
     }
 }

@@ -57,3 +57,8 @@ C:\Users\osman.ban\Documents\git-Baris\Kurtarma\DevProje\Projem\obj\Debug\Projem
 C:\Users\osman.ban\Documents\git-Baris\Kurtarma\DevProje\Projem\obj\Debug\Projem.FormForgetMyPassword.resources
 C:\Users\osman.ban\Documents\git-Baris\Kurtarma\DevProje\Projem\obj\Debug\Projem.FormNewUser.resources
 C:\Users\osman.ban\Documents\git-Baris\Kurtarma\DevProje\Projem\obj\Debug\Projem.FormUserUpdate.resources
+D:\GitProje\Projelerim\Kurtarma\DevProje\Projem\obj\Debug\Projem.FormDeleteUser.resources
+D:\GitProje\Projelerim\Kurtarma\DevProje\Projem\obj\Debug\Projem.FormForgetMyPassword.resources
+D:\GitProje\Projelerim\Kurtarma\DevProje\Projem\obj\Debug\Projem.FormNewUser.resources
+D:\GitProje\Projelerim\Kurtarma\DevProje\Projem\obj\Debug\Projem.FormUserUpdate.resources
+D:\GitProje\Projelerim\Kurtarma\DevProje\Projem\obj\Debug\Projem.FormStock.resources

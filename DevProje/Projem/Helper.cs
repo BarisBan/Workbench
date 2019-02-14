@@ -15,6 +15,7 @@ namespace Projem
     class Helper
     {
 
+
         // email kontrolü yapan metod
         public bool MailIsAccept(string email)
         {
@@ -139,6 +140,52 @@ namespace Projem
                 }
             }
             return tel3;
+        }
+
+        public static void OpenNewFormMain()
+        {
+            FormMain f = new FormMain();
+            f.Show();
+        }
+        public static void OpenNewFormCreateUser()
+        {
+            FormCreateUser f = new FormCreateUser();
+            f.Show();
+        }
+        public static void OpenNewFormDeleteUser()
+        {
+            FormDeleteUser f = new FormDeleteUser();
+            f.Show();
+        }
+        public static void OpenNewFormForgetMyPassword()
+        {
+            FormForgetMyPassword f = new FormForgetMyPassword();
+            f.Show();
+        }
+        public static void OpenNewFormLogin()
+        {
+            FormLogin f = new FormLogin();
+            f.Show();
+        }
+        public static void OpenNewFormNewUser()
+        {
+            FormNewUser f = new FormNewUser();
+            f.Show();
+        }
+        public static void OpenNewFormStock()
+        {
+            FormStock f = new FormStock();
+            f.Show();
+        }
+        public static void OpenNewFormUserSettings()
+        {
+            FormUserSettings f = new FormUserSettings();
+            f.Show();
+        }
+        public static void OpenNewFormUserUdate()
+        {
+            FormUserUpdate f = new FormUserUpdate();
+            f.Show();
         }
     }
 }

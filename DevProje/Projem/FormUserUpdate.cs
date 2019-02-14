@@ -43,7 +43,8 @@ namespace Projem
 
         private void btnKayıtOl_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Helper.OpenNewFormMain();
+            this.Hide();
         }
     }
 }

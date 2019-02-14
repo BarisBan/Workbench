@@ -31,8 +31,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUserUpdate));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dgPersonel = new System.Windows.Forms.DataGridView();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btBaglan = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txbNewPass = new System.Windows.Forms.TextBox();
+            this.txbNewUserName = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -46,20 +55,11 @@
             this.txbNewLastName = new System.Windows.Forms.TextBox();
             this.txbNewFirstName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.txbNewPass = new System.Windows.Forms.TextBox();
-            this.txbNewUserName = new System.Windows.Forms.TextBox();
-            this.btBaglan = new System.Windows.Forms.Button();
             this.btnKayıtOl = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgPersonel)).BeginInit();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -72,7 +72,7 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(524, 286);
+            this.tabControl1.Size = new System.Drawing.Size(640, 333);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -82,9 +82,19 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(516, 260);
+            this.tabPage1.Size = new System.Drawing.Size(632, 307);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Personel Listesi";
+            // 
+            // dgPersonel
+            // 
+            this.dgPersonel.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgPersonel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgPersonel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgPersonel.Location = new System.Drawing.Point(3, 3);
+            this.dgPersonel.Name = "dgPersonel";
+            this.dgPersonel.Size = new System.Drawing.Size(626, 301);
+            this.dgPersonel.TabIndex = 0;
             // 
             // tabPage2
             // 
@@ -119,15 +129,121 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Personel Detayı";
             // 
-            // dgPersonel
+            // btBaglan
             // 
-            this.dgPersonel.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dgPersonel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgPersonel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgPersonel.Location = new System.Drawing.Point(3, 3);
-            this.dgPersonel.Name = "dgPersonel";
-            this.dgPersonel.Size = new System.Drawing.Size(510, 254);
-            this.dgPersonel.TabIndex = 0;
+            this.btBaglan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btBaglan.BackColor = System.Drawing.Color.SteelBlue;
+            this.btBaglan.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btBaglan.BackgroundImage")));
+            this.btBaglan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btBaglan.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.btBaglan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
+            this.btBaglan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MidnightBlue;
+            this.btBaglan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btBaglan.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btBaglan.ForeColor = System.Drawing.Color.White;
+            this.btBaglan.Image = ((System.Drawing.Image)(resources.GetObject("btBaglan.Image")));
+            this.btBaglan.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.btBaglan.Location = new System.Drawing.Point(407, 140);
+            this.btBaglan.Margin = new System.Windows.Forms.Padding(4);
+            this.btBaglan.Name = "btBaglan";
+            this.btBaglan.Size = new System.Drawing.Size(100, 100);
+            this.btBaglan.TabIndex = 354;
+            this.btBaglan.Text = "Güncelle";
+            this.btBaglan.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btBaglan.UseVisualStyleBackColor = false;
+            this.btBaglan.Click += new System.EventHandler(this.btBaglan_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label7.Location = new System.Drawing.Point(269, 7);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(99, 17);
+            this.label7.TabIndex = 353;
+            this.label7.Text = "Kullanıcı Adı :";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label6.Location = new System.Drawing.Point(324, 38);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 17);
+            this.label6.TabIndex = 352;
+            this.label6.Text = "Şifre :";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label4.Location = new System.Drawing.Point(374, 103);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 17);
+            this.label4.TabIndex = 351;
+            this.label4.Text = "Şube :";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(429, 99);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(78, 24);
+            this.comboBox2.TabIndex = 350;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label3.Location = new System.Drawing.Point(323, 70);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 17);
+            this.label3.TabIndex = 349;
+            this.label3.Text = "Kullanıcı Tipi :";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Yetkili",
+            "Çalışan"});
+            this.comboBox1.Location = new System.Drawing.Point(429, 69);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(78, 24);
+            this.comboBox1.TabIndex = 348;
+            // 
+            // txbNewPass
+            // 
+            this.txbNewPass.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txbNewPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbNewPass.Enabled = false;
+            this.txbNewPass.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txbNewPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txbNewPass.Location = new System.Drawing.Point(375, 36);
+            this.txbNewPass.Margin = new System.Windows.Forms.Padding(4);
+            this.txbNewPass.MaxLength = 10;
+            this.txbNewPass.Name = "txbNewPass";
+            this.txbNewPass.PasswordChar = '*';
+            this.txbNewPass.Size = new System.Drawing.Size(132, 23);
+            this.txbNewPass.TabIndex = 347;
+            // 
+            // txbNewUserName
+            // 
+            this.txbNewUserName.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txbNewUserName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbNewUserName.Enabled = false;
+            this.txbNewUserName.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txbNewUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txbNewUserName.Location = new System.Drawing.Point(375, 5);
+            this.txbNewUserName.Margin = new System.Windows.Forms.Padding(4);
+            this.txbNewUserName.MaxLength = 10;
+            this.txbNewUserName.Name = "txbNewUserName";
+            this.txbNewUserName.Size = new System.Drawing.Size(132, 24);
+            this.txbNewUserName.TabIndex = 346;
             // 
             // label9
             // 
@@ -290,135 +406,20 @@
             this.label1.TabIndex = 338;
             this.label1.Text = "Doğum Tarihi :";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label7.Location = new System.Drawing.Point(269, 7);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(99, 17);
-            this.label7.TabIndex = 353;
-            this.label7.Text = "Kullanıcı Adı :";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label6.Location = new System.Drawing.Point(324, 38);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 17);
-            this.label6.TabIndex = 352;
-            this.label6.Text = "Şifre :";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(374, 103);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 17);
-            this.label4.TabIndex = 351;
-            this.label4.Text = "Şube :";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(429, 99);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(78, 24);
-            this.comboBox2.TabIndex = 350;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(323, 70);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 17);
-            this.label3.TabIndex = 349;
-            this.label3.Text = "Kullanıcı Tipi :";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Yetkili",
-            "Çalışan"});
-            this.comboBox1.Location = new System.Drawing.Point(429, 69);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(78, 24);
-            this.comboBox1.TabIndex = 348;
-            // 
-            // txbNewPass
-            // 
-            this.txbNewPass.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.txbNewPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbNewPass.Enabled = false;
-            this.txbNewPass.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txbNewPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txbNewPass.Location = new System.Drawing.Point(375, 36);
-            this.txbNewPass.Margin = new System.Windows.Forms.Padding(4);
-            this.txbNewPass.MaxLength = 10;
-            this.txbNewPass.Name = "txbNewPass";
-            this.txbNewPass.PasswordChar = '*';
-            this.txbNewPass.Size = new System.Drawing.Size(132, 23);
-            this.txbNewPass.TabIndex = 347;
-            // 
-            // txbNewUserName
-            // 
-            this.txbNewUserName.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.txbNewUserName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbNewUserName.Enabled = false;
-            this.txbNewUserName.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txbNewUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txbNewUserName.Location = new System.Drawing.Point(375, 5);
-            this.txbNewUserName.Margin = new System.Windows.Forms.Padding(4);
-            this.txbNewUserName.MaxLength = 10;
-            this.txbNewUserName.Name = "txbNewUserName";
-            this.txbNewUserName.Size = new System.Drawing.Size(132, 24);
-            this.txbNewUserName.TabIndex = 346;
-            // 
-            // btBaglan
-            // 
-            this.btBaglan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btBaglan.BackColor = System.Drawing.Color.SteelBlue;
-            this.btBaglan.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btBaglan.BackgroundImage")));
-            this.btBaglan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btBaglan.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
-            this.btBaglan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
-            this.btBaglan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MidnightBlue;
-            this.btBaglan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btBaglan.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btBaglan.ForeColor = System.Drawing.Color.White;
-            this.btBaglan.Image = ((System.Drawing.Image)(resources.GetObject("btBaglan.Image")));
-            this.btBaglan.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.btBaglan.Location = new System.Drawing.Point(407, 140);
-            this.btBaglan.Margin = new System.Windows.Forms.Padding(4);
-            this.btBaglan.Name = "btBaglan";
-            this.btBaglan.Size = new System.Drawing.Size(100, 100);
-            this.btBaglan.TabIndex = 354;
-            this.btBaglan.Text = "Güncelle";
-            this.btBaglan.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btBaglan.UseVisualStyleBackColor = false;
-            this.btBaglan.Click += new System.EventHandler(this.btBaglan_Click);
-            // 
             // btnKayıtOl
             // 
             this.btnKayıtOl.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnKayıtOl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnKayıtOl.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
             this.btnKayıtOl.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.btnKayıtOl.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MidnightBlue;
             this.btnKayıtOl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKayıtOl.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKayıtOl.Font = new System.Drawing.Font("Century Gothic", 8.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKayıtOl.ForeColor = System.Drawing.Color.White;
-            this.btnKayıtOl.Location = new System.Drawing.Point(445, 313);
+            this.btnKayıtOl.Location = new System.Drawing.Point(559, 390);
             this.btnKayıtOl.Margin = new System.Windows.Forms.Padding(4);
             this.btnKayıtOl.Name = "btnKayıtOl";
-            this.btnKayıtOl.Size = new System.Drawing.Size(103, 26);
+            this.btnKayıtOl.Size = new System.Drawing.Size(93, 27);
             this.btnKayıtOl.TabIndex = 5;
             this.btnKayıtOl.Text = "Çıkış";
             this.btnKayıtOl.UseVisualStyleBackColor = false;
@@ -429,17 +430,18 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(564, 352);
+            this.ClientSize = new System.Drawing.Size(664, 430);
             this.Controls.Add(this.btnKayıtOl);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormUserUpdate";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kullanıcı Güncelleme";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgPersonel)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgPersonel)).EndInit();
             this.ResumeLayout(false);
 
         }

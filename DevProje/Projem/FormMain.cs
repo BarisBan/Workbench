@@ -12,15 +12,12 @@ namespace Projem
 {
     public partial class FormMain : Form
     {
-
-
-        FormLogin formLogin = new FormLogin();
         public FormMain()
         {
             InitializeComponent();
         }
 
-       
+
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -34,17 +31,19 @@ namespace Projem
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-            
-            
 
-            
-            
+
+
+
+
         }
 
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
+            Helper.OpenNewFormLogin();
+            this.Hide();
             
-            formLogin.Show();
         }
 
         private void ayarlarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -59,8 +58,19 @@ namespace Projem
 
         private void kullanıcılarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormUserSettings formUserSettings = new FormUserSettings();
-            formUserSettings.Show();
+            Helper.OpenNewFormUserSettings();
+            this.Hide();
+            
+        }
+
+        private void stockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void hakkındaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

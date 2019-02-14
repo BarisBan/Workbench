@@ -14,8 +14,7 @@ namespace Projem
 {
     public partial class FormLogin : Form
     {
-        string connString = ConnectionHelper.GetConnectionString();
-        SqlConnection connect;
+        
 
         public FormLogin()
         {
@@ -30,8 +29,9 @@ namespace Projem
         private void btBaglan_Click(object sender, EventArgs e)
         {
 
+      
             FormMain formMain = new FormMain();
-            connect = new SqlConnection(connString);
+            SqlConnection connect = new SqlConnection(ConnectionHelper.GetConnectionString());
             connect.Open();
 
             string userName = txbUserName.Text.Trim();
@@ -53,22 +53,23 @@ namespace Projem
                     if (dt.Rows[0][6].ToString() == "1")
                     {
                         MessageBox.Show($"Hoşgeldin Yönetici {dt.Rows[0][1].ToString()} {dt.Rows[0][3].ToString()}", "Giriş Başarılı", MessageBoxButtons.OK);
-                        this.Hide();
                         formMain.ayarlarToolStripMenuItem.Enabled = true;
                         formMain.satısToolStripMenuItem.Enabled = true;
                         formMain.stockToolStripMenuItem.Enabled = true;
-                        formMain.raporlarToolStripMenuItem.Enabled = true;         
-                        formMain.Show();
+                        formMain.raporlarToolStripMenuItem.Enabled = true;
+                        Helper.OpenNewFormMain();
+                        this.Hide();
                     }
                     else
                     {
                         MessageBox.Show($"Hoşgeldin {dt.Rows[0][1].ToString()} {dt.Rows[0][3].ToString()}", "Giriş Başarılı", MessageBoxButtons.OK);
-                        this.Hide();                     
+                                             
 
                         formMain.satısToolStripMenuItem.Enabled = true;
                         formMain.stockToolStripMenuItem.Enabled = true;
                         formMain.raporlarToolStripMenuItem.Enabled = true;
-                        formMain.Show();
+                        Helper.OpenNewFormMain();
+                        this.Hide();
                     }
                 }
             }
@@ -83,8 +84,7 @@ namespace Projem
 
         private void btnKayıtOl_Click(object sender, EventArgs e)
         {
-            FormCreateUser formCreateUser = new FormCreateUser();
-            formCreateUser.Show();
+            Helper.OpenNewFormCreateUser();
             this.Hide();
 
         }
@@ -96,8 +96,7 @@ namespace Projem
 
         private void btUnut_Click(object sender, EventArgs e)
         {
-            FormForgetMyPassword formForgetMyPassword = new FormForgetMyPassword();
-            formForgetMyPassword.Show();
+            Helper.OpenNewFormForgetMyPassword();
             this.Hide();
         }
     }

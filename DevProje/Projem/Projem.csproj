@@ -85,6 +85,12 @@
     <Compile Include="FormNewUser.Designer.cs">
       <DependentUpon>FormNewUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStock.Designer.cs">
+      <DependentUpon>FormStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUserSettings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormNewUser.resx">
       <DependentUpon>FormNewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStock.resx">
+      <DependentUpon>FormStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUserSettings.resx">
       <DependentUpon>FormUserSettings.cs</DependentUpon>

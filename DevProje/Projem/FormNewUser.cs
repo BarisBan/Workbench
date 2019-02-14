@@ -136,7 +136,8 @@ namespace Projem
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Helper.OpenNewFormMain();
+            this.Hide();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

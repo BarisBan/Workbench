@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormForgetMyPassword));
             this.txbforgetmypass = new System.Windows.Forms.TextBox();
             this.btBaglan = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txbforgetmypass
@@ -39,7 +40,7 @@
             this.txbforgetmypass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbforgetmypass.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txbforgetmypass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txbforgetmypass.Location = new System.Drawing.Point(31, 39);
+            this.txbforgetmypass.Location = new System.Drawing.Point(37, 24);
             this.txbforgetmypass.Margin = new System.Windows.Forms.Padding(4);
             this.txbforgetmypass.MaxLength = 50;
             this.txbforgetmypass.Name = "txbforgetmypass";
@@ -61,7 +62,7 @@
             this.btBaglan.ForeColor = System.Drawing.Color.White;
             this.btBaglan.Image = ((System.Drawing.Image)(resources.GetObject("btBaglan.Image")));
             this.btBaglan.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.btBaglan.Location = new System.Drawing.Point(107, 86);
+            this.btBaglan.Location = new System.Drawing.Point(104, 65);
             this.btBaglan.Margin = new System.Windows.Forms.Padding(4);
             this.btBaglan.Name = "btBaglan";
             this.btBaglan.Size = new System.Drawing.Size(120, 120);
@@ -71,12 +72,32 @@
             this.btBaglan.UseVisualStyleBackColor = false;
             this.btBaglan.Click += new System.EventHandler(this.btBaglan_Click);
             // 
+            // btnExit
+            // 
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExit.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
+            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MidnightBlue;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Location = new System.Drawing.Point(265, 191);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(57, 26);
+            this.btnExit.TabIndex = 334;
+            this.btnExit.Text = "Çıkış";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // FormForgetMyPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(324, 219);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btBaglan);
             this.Controls.Add(this.txbforgetmypass);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -93,5 +114,6 @@
 
         private System.Windows.Forms.TextBox txbforgetmypass;
         private System.Windows.Forms.Button btBaglan;
+        private System.Windows.Forms.Button btnExit;
     }
 }

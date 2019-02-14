@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCreateUser));
             this.txbNewPass = new System.Windows.Forms.TextBox();
             this.txbNewUserName = new System.Windows.Forms.TextBox();
@@ -41,17 +40,10 @@
             this.rbKadın = new System.Windows.Forms.RadioButton();
             this.rbErkek = new System.Windows.Forms.RadioButton();
             this.rbNone = new System.Windows.Forms.RadioButton();
-            this.citiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.m303SalesDBDataSet = new Projem.M303SalesDBDataSet();
-            this.citiesTableAdapter = new Projem.M303SalesDBDataSetTableAdapters.CitiesTableAdapter();
-            this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
-            this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.txbPhone = new System.Windows.Forms.MaskedTextBox();
             this.txbEmail = new System.Windows.Forms.TextBox();
             this.lbTel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.citiesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.m303SalesDBDataSet)).BeginInit();
-            this.fillByToolStrip.SuspendLayout();
+            this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txbNewPass
@@ -161,7 +153,7 @@
             this.btBaglan.ForeColor = System.Drawing.Color.White;
             this.btBaglan.Image = ((System.Drawing.Image)(resources.GetObject("btBaglan.Image")));
             this.btBaglan.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.btBaglan.Location = new System.Drawing.Point(307, 118);
+            this.btBaglan.Location = new System.Drawing.Point(288, 118);
             this.btBaglan.Margin = new System.Windows.Forms.Padding(4);
             this.btBaglan.Name = "btBaglan";
             this.btBaglan.Size = new System.Drawing.Size(120, 120);
@@ -210,40 +202,6 @@
             this.rbNone.UseVisualStyleBackColor = true;
             this.rbNone.Visible = false;
             // 
-            // citiesBindingSource
-            // 
-            this.citiesBindingSource.DataMember = "Cities";
-            this.citiesBindingSource.DataSource = this.m303SalesDBDataSet;
-            // 
-            // m303SalesDBDataSet
-            // 
-            this.m303SalesDBDataSet.DataSetName = "M303SalesDBDataSet";
-            this.m303SalesDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // citiesTableAdapter
-            // 
-            this.citiesTableAdapter.ClearBeforeFill = true;
-            // 
-            // fillByToolStrip
-            // 
-            this.fillByToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.fillByToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fillByToolStripButton});
-            this.fillByToolStrip.Location = new System.Drawing.Point(0, 0);
-            this.fillByToolStrip.Name = "fillByToolStrip";
-            this.fillByToolStrip.Size = new System.Drawing.Size(644, 25);
-            this.fillByToolStrip.TabIndex = 303;
-            this.fillByToolStrip.Text = "fillByToolStrip";
-            this.fillByToolStrip.Visible = false;
-            // 
-            // fillByToolStripButton
-            // 
-            this.fillByToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.fillByToolStripButton.Name = "fillByToolStripButton";
-            this.fillByToolStripButton.Size = new System.Drawing.Size(39, 22);
-            this.fillByToolStripButton.Text = "FillBy";
-            this.fillByToolStripButton.Click += new System.EventHandler(this.fillByToolStripButton_Click);
-            // 
             // txbPhone
             // 
             this.txbPhone.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -283,16 +241,35 @@
             this.lbTel.Text = "Tel NO:";
             this.lbTel.Click += new System.EventHandler(this.label2_Click);
             // 
+            // btnExit
+            // 
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExit.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
+            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MidnightBlue;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Location = new System.Drawing.Point(364, 278);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(44, 26);
+            this.btnExit.TabIndex = 337;
+            this.btnExit.Text = "Çıkış";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // FormCreateUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(439, 251);
+            this.ClientSize = new System.Drawing.Size(421, 307);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lbTel);
             this.Controls.Add(this.txbEmail);
             this.Controls.Add(this.txbPhone);
-            this.Controls.Add(this.fillByToolStrip);
             this.Controls.Add(this.rbNone);
             this.Controls.Add(this.rbErkek);
             this.Controls.Add(this.rbKadın);
@@ -308,11 +285,6 @@
             this.Name = "FormCreateUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Şube";
-            this.Load += new System.EventHandler(this.FormCreateUser_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.citiesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.m303SalesDBDataSet)).EndInit();
-            this.fillByToolStrip.ResumeLayout(false);
-            this.fillByToolStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -331,13 +303,9 @@
         private System.Windows.Forms.RadioButton rbKadın;
         private System.Windows.Forms.RadioButton rbErkek;
         private System.Windows.Forms.RadioButton rbNone;
-        private M303SalesDBDataSet m303SalesDBDataSet;
-        private System.Windows.Forms.BindingSource citiesBindingSource;
-        private M303SalesDBDataSetTableAdapters.CitiesTableAdapter citiesTableAdapter;
-        private System.Windows.Forms.ToolStrip fillByToolStrip;
-        private System.Windows.Forms.ToolStripButton fillByToolStripButton;
         private System.Windows.Forms.MaskedTextBox txbPhone;
         private System.Windows.Forms.TextBox txbEmail;
         private System.Windows.Forms.Label lbTel;
+        private System.Windows.Forms.Button btnExit;
     }
 }
