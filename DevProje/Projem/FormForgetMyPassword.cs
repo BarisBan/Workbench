@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
 namespace Projem
 {
     public partial class FormForgetMyPassword : Form
@@ -19,9 +19,26 @@ namespace Projem
 
         private void btBaglan_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"{txbforgetmypass.Text} Adresine kurtarma şifresi gönderildi. Lütfen Mailinizi kontrol edin.", "Gönder", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            SqlConnection connect = new SqlConnection(ConnectionHelper.GetConnectionString());
+            connect.Open();
+            string Email = txbforgetmypass.Text.Trim();
 
+            SqlCommand command = new SqlCommand("Select Email from Employees where Email = '"+Email+"'", connect);
+            
+
+            object varmi= command.ExecuteScalar();
+
+            if(varmi!=null)
+            {
+            MessageBox.Show($"{txbforgetmypass.Text} Adresine kurtarma şifresi gönderildi. Lütfen Mailinizi kontrol edin.", "Gönder", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
             MessageBox.Show("Email Adersi Doğrulanamadı.","Hata",MessageBoxButtons.OK,MessageBoxIcon.Information);
+
+            }
+            connect.Close();
+
         }
     }
 }

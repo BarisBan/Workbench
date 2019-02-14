@@ -22,14 +22,12 @@ C:\Users\osman.ban\Documents\git-Baris\Kurtarma\Kurtarma\DevProje\Projem\obj\Deb
 C:\Users\osman.ban\Documents\git-Baris\Kurtarma\Kurtarma\DevProje\Projem\obj\Debug\Projem.csproj.GenerateResource.Cache
 C:\Users\osman.ban\Documents\git-Baris\Kurtarma\Kurtarma\DevProje\Projem\bin\Debug\Projem.exe
 C:\Users\osman.ban\Documents\git-Baris\Kurtarma\Kurtarma\DevProje\Projem\bin\Debug\Projem.pdb
-C:\Users\osman.ban\Documents\git-Baris\Kurtarma\DevProje\Projem\obj\Debug\Projem.csprojAssemblyReference.cache
 C:\Users\osman.ban\Documents\git-Baris\Kurtarma\DevProje\Projem\obj\Debug\Projem.FormCreateUser.resources
 C:\Users\osman.ban\Documents\git-Baris\Kurtarma\DevProje\Projem\obj\Debug\Projem.FormLogin.resources
 C:\Users\osman.ban\Documents\git-Baris\Kurtarma\DevProje\Projem\obj\Debug\Projem.FormMain.resources
 C:\Users\osman.ban\Documents\git-Baris\Kurtarma\DevProje\Projem\obj\Debug\Projem.FormUserSettings.resources
 C:\Users\osman.ban\Documents\git-Baris\Kurtarma\DevProje\Projem\obj\Debug\Projem.Properties.Resources.resources
 C:\Users\osman.ban\Documents\git-Baris\Kurtarma\DevProje\Projem\obj\Debug\Projem.csproj.GenerateResource.cache
-C:\Users\osman.ban\Documents\git-Baris\Kurtarma\DevProje\Projem\obj\Debug\Projem.csproj.CoreCompileInputs.cache
 C:\Users\osman.ban\Documents\git-Baris\Kurtarma\DevProje\Projem\obj\Debug\Projem.exe
 C:\Users\osman.ban\Documents\git-Baris\Kurtarma\DevProje\Projem\obj\Debug\Projem.pdb
 C:\Users\osman.ban\Documents\git-Baris\Kurtarma\DevProje\Projem\bin\Debug\Projem.exe.config
@@ -54,3 +52,8 @@ C:\Users\USER\Documents\OneDrive\Sıkıntılı proje\DevProje\Projem\obj\Debug\P
 C:\Users\USER\Desktop\DevProje\Projem\obj\Debug\Projem.csprojAssemblyReference.cache
 C:\Users\USER\Desktop\DevProje\Projem\obj\Debug\Projem.exe
 C:\Users\USER\Desktop\DevProje\Projem\obj\Debug\Projem.pdb
+C:\Users\osman.ban\Documents\git-Baris\Kurtarma\DevProje\Projem\obj\Debug\Projem.csprojResolveAssemblyReference.cache
+C:\Users\osman.ban\Documents\git-Baris\Kurtarma\DevProje\Projem\obj\Debug\Projem.FormDeleteUser.resources
+C:\Users\osman.ban\Documents\git-Baris\Kurtarma\DevProje\Projem\obj\Debug\Projem.FormForgetMyPassword.resources
+C:\Users\osman.ban\Documents\git-Baris\Kurtarma\DevProje\Projem\obj\Debug\Projem.FormNewUser.resources
+C:\Users\osman.ban\Documents\git-Baris\Kurtarma\DevProje\Projem\obj\Debug\Projem.FormUserUpdate.resources

@@ -103,6 +103,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>M303SalesDBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="M303SalesDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>M303SalesDBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="M303SalesDBDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>M303SalesDBDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="M303SalesDBDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>M303SalesDBDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="M303SalesDBDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>M303SalesDBDataSet4.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormCreateUser.resx">
@@ -148,6 +168,50 @@
     </None>
     <None Include="M303SalesDBDataSet.xss">
       <DependentUpon>M303SalesDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="M303SalesDBDataSet1.xsc">
+      <DependentUpon>M303SalesDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="M303SalesDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>M303SalesDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="M303SalesDBDataSet1.xss">
+      <DependentUpon>M303SalesDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="M303SalesDBDataSet2.xsc">
+      <DependentUpon>M303SalesDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="M303SalesDBDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>M303SalesDBDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="M303SalesDBDataSet2.xss">
+      <DependentUpon>M303SalesDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="M303SalesDBDataSet3.xsc">
+      <DependentUpon>M303SalesDBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="M303SalesDBDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>M303SalesDBDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="M303SalesDBDataSet3.xss">
+      <DependentUpon>M303SalesDBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="M303SalesDBDataSet4.xsc">
+      <DependentUpon>M303SalesDBDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="M303SalesDBDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>M303SalesDBDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="M303SalesDBDataSet4.xss">
+      <DependentUpon>M303SalesDBDataSet4.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

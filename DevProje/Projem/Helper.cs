@@ -54,6 +54,11 @@ namespace Projem
             comand.Parameters.AddWithValue("@User", user);
 
             object varMi = comand.ExecuteScalar();
+
+            SqlCommand comand2 = new SqlCommand("Select UserName From NewUser Where UserName = @User ", connect);
+            comand2.Parameters.AddWithValue("@User", user);
+
+            object varMi2 = comand2.ExecuteScalar();
             comand.Parameters.Clear();
             connect.Close();
 
@@ -67,6 +72,15 @@ namespace Projem
                 uygunluk = true;
             }
 
+            if (varMi2 != null)
+            {
+                MessageBox.Show("Bu kullanıcı ismi kullanılıyor. Lütfen başka bir kullanıcı ismi giriniz.");
+                uygunluk = false;
+            }
+            else
+            {
+                uygunluk = true;
+            }
             return uygunluk;
         }
 
@@ -103,13 +117,28 @@ namespace Projem
             }
             else
             {
-                MessageBox.Show("Kayıt olmak için 18 Yaşından büyük olmanız gerekmektedir. ","HATA",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Kayıt olmak için 18 Yaşından büyük olmanız gerekmektedir. ", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 uygunluk = false;
             }
             return uygunluk;
         }
 
-        
+        public string PhoneCorrector(string phone)
+        {
+            char[] tel2 = phone.ToCharArray();
+            string tel3 = "";
+            foreach (var item in tel2)
+            {
+                if (item != '(' && item != ')' && item != '-' && item != ' ')
+                {
+                    tel3 = tel3 + item;
+                }
+                else
+                {
 
+                }
+            }
+            return tel3;
+        }
     }
 }

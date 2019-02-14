@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNewUser));
             this.lbTel = new System.Windows.Forms.Label();
             this.txbEmail = new System.Windows.Forms.TextBox();
@@ -41,11 +42,13 @@
             this.txbNewPass = new System.Windows.Forms.TextBox();
             this.txbNewUserName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbKulTip = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbSube = new System.Windows.Forms.ComboBox();
+            this.citiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.m303SalesDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.m303SalesDBDataSet = new Projem.M303SalesDBDataSet();
             this.label4 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.mtbDogum = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -54,6 +57,41 @@
             this.label9 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.btSil = new System.Windows.Forms.Button();
+            this.citiesTableAdapter = new Projem.M303SalesDBDataSetTableAdapters.CitiesTableAdapter();
+            this.m303SalesDBDataSet1 = new Projem.M303SalesDBDataSet1();
+            this.newUserBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.newUserTableAdapter = new Projem.M303SalesDBDataSet1TableAdapters.NewUserTableAdapter();
+            this.m303SalesDBDataSet2 = new Projem.M303SalesDBDataSet2();
+            this.employeesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.employeesTableAdapter = new Projem.M303SalesDBDataSet2TableAdapters.EmployeesTableAdapter();
+            this.m303SalesDBDataSet3 = new Projem.M303SalesDBDataSet3();
+            this.employeesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.employeesTableAdapter1 = new Projem.M303SalesDBDataSet3TableAdapters.EmployeesTableAdapter();
+            this.m303SalesDBDataSet4 = new Projem.M303SalesDBDataSet4();
+            this.newUserBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.newUserTableAdapter1 = new Projem.M303SalesDBDataSet4TableAdapters.NewUserTableAdapter();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.newUserIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.middleInitialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userPassDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.yetkiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cinsiyetDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.citiesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m303SalesDBDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m303SalesDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m303SalesDBDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newUserBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m303SalesDBDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m303SalesDBDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m303SalesDBDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newUserBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -224,17 +262,16 @@
             this.label2.TabIndex = 321;
             this.label2.Text = "Cinsiyet :";
             // 
-            // comboBox1
+            // cbKulTip
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbKulTip.FormattingEnabled = true;
+            this.cbKulTip.Items.AddRange(new object[] {
             "Yetkili",
-            "Çalışan"});
-            this.comboBox1.Location = new System.Drawing.Point(414, 181);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(78, 21);
-            this.comboBox1.TabIndex = 322;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            "Personel"});
+            this.cbKulTip.Location = new System.Drawing.Point(414, 181);
+            this.cbKulTip.Name = "cbKulTip";
+            this.cbKulTip.Size = new System.Drawing.Size(78, 21);
+            this.cbKulTip.TabIndex = 322;
             // 
             // label3
             // 
@@ -247,13 +284,32 @@
             this.label3.TabIndex = 323;
             this.label3.Text = "Kullanıcı Tipi :";
             // 
-            // comboBox2
+            // cbSube
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(414, 208);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(78, 21);
-            this.comboBox2.TabIndex = 324;
+            this.cbSube.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.citiesBindingSource, "Şube", true));
+            this.cbSube.DataSource = this.citiesBindingSource;
+            this.cbSube.DisplayMember = "Şube";
+            this.cbSube.FormattingEnabled = true;
+            this.cbSube.Location = new System.Drawing.Point(414, 208);
+            this.cbSube.Name = "cbSube";
+            this.cbSube.Size = new System.Drawing.Size(78, 21);
+            this.cbSube.TabIndex = 324;
+            this.cbSube.ValueMember = "CitiesID";
+            // 
+            // citiesBindingSource
+            // 
+            this.citiesBindingSource.DataMember = "Cities";
+            this.citiesBindingSource.DataSource = this.m303SalesDBDataSetBindingSource;
+            // 
+            // m303SalesDBDataSetBindingSource
+            // 
+            this.m303SalesDBDataSetBindingSource.DataSource = this.m303SalesDBDataSet;
+            this.m303SalesDBDataSetBindingSource.Position = 0;
+            // 
+            // m303SalesDBDataSet
+            // 
+            this.m303SalesDBDataSet.DataSetName = "M303SalesDBDataSet";
+            this.m303SalesDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label4
             // 
@@ -265,18 +321,6 @@
             this.label4.Size = new System.Drawing.Size(49, 17);
             this.label4.TabIndex = 325;
             this.label4.Text = "Şube :";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 247);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(675, 155);
-            this.dataGridView1.TabIndex = 326;
             // 
             // mtbDogum
             // 
@@ -389,12 +433,159 @@
             this.btSil.UseVisualStyleBackColor = false;
             this.btSil.Click += new System.EventHandler(this.btSil_Click);
             // 
+            // citiesTableAdapter
+            // 
+            this.citiesTableAdapter.ClearBeforeFill = true;
+            // 
+            // m303SalesDBDataSet1
+            // 
+            this.m303SalesDBDataSet1.DataSetName = "M303SalesDBDataSet1";
+            this.m303SalesDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // newUserBindingSource
+            // 
+            this.newUserBindingSource.DataMember = "NewUser";
+            this.newUserBindingSource.DataSource = this.m303SalesDBDataSet1;
+            // 
+            // newUserTableAdapter
+            // 
+            this.newUserTableAdapter.ClearBeforeFill = true;
+            // 
+            // m303SalesDBDataSet2
+            // 
+            this.m303SalesDBDataSet2.DataSetName = "M303SalesDBDataSet2";
+            this.m303SalesDBDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // employeesBindingSource
+            // 
+            this.employeesBindingSource.DataMember = "Employees";
+            this.employeesBindingSource.DataSource = this.m303SalesDBDataSet2;
+            // 
+            // employeesTableAdapter
+            // 
+            this.employeesTableAdapter.ClearBeforeFill = true;
+            // 
+            // m303SalesDBDataSet3
+            // 
+            this.m303SalesDBDataSet3.DataSetName = "M303SalesDBDataSet3";
+            this.m303SalesDBDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // employeesBindingSource1
+            // 
+            this.employeesBindingSource1.DataMember = "Employees";
+            this.employeesBindingSource1.DataSource = this.m303SalesDBDataSet3;
+            // 
+            // employeesTableAdapter1
+            // 
+            this.employeesTableAdapter1.ClearBeforeFill = true;
+            // 
+            // m303SalesDBDataSet4
+            // 
+            this.m303SalesDBDataSet4.DataSetName = "M303SalesDBDataSet4";
+            this.m303SalesDBDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // newUserBindingSource1
+            // 
+            this.newUserBindingSource1.DataMember = "NewUser";
+            this.newUserBindingSource1.DataSource = this.m303SalesDBDataSet4;
+            // 
+            // newUserTableAdapter1
+            // 
+            this.newUserTableAdapter1.ClearBeforeFill = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.newUserIDDataGridViewTextBoxColumn,
+            this.firstNameDataGridViewTextBoxColumn,
+            this.middleInitialDataGridViewTextBoxColumn,
+            this.lastNameDataGridViewTextBoxColumn,
+            this.userNameDataGridViewTextBoxColumn,
+            this.userPassDataGridViewTextBoxColumn,
+            this.yetkiDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn,
+            this.phoneNumberDataGridViewTextBoxColumn,
+            this.cinsiyetDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.newUserBindingSource1;
+            this.dataGridView1.Location = new System.Drawing.Point(7, 247);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(679, 165);
+            this.dataGridView1.TabIndex = 335;
+            this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
+            // 
+            // newUserIDDataGridViewTextBoxColumn
+            // 
+            this.newUserIDDataGridViewTextBoxColumn.DataPropertyName = "NewUserID";
+            this.newUserIDDataGridViewTextBoxColumn.HeaderText = "NewUserID";
+            this.newUserIDDataGridViewTextBoxColumn.Name = "newUserIDDataGridViewTextBoxColumn";
+            this.newUserIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // firstNameDataGridViewTextBoxColumn
+            // 
+            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            // 
+            // middleInitialDataGridViewTextBoxColumn
+            // 
+            this.middleInitialDataGridViewTextBoxColumn.DataPropertyName = "MiddleInitial";
+            this.middleInitialDataGridViewTextBoxColumn.HeaderText = "MiddleInitial";
+            this.middleInitialDataGridViewTextBoxColumn.Name = "middleInitialDataGridViewTextBoxColumn";
+            this.middleInitialDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            // 
+            // userNameDataGridViewTextBoxColumn
+            // 
+            this.userNameDataGridViewTextBoxColumn.DataPropertyName = "UserName";
+            this.userNameDataGridViewTextBoxColumn.HeaderText = "UserName";
+            this.userNameDataGridViewTextBoxColumn.Name = "userNameDataGridViewTextBoxColumn";
+            // 
+            // userPassDataGridViewTextBoxColumn
+            // 
+            this.userPassDataGridViewTextBoxColumn.DataPropertyName = "UserPass";
+            this.userPassDataGridViewTextBoxColumn.HeaderText = "UserPass";
+            this.userPassDataGridViewTextBoxColumn.Name = "userPassDataGridViewTextBoxColumn";
+            this.userPassDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // yetkiDataGridViewTextBoxColumn
+            // 
+            this.yetkiDataGridViewTextBoxColumn.DataPropertyName = "Yetki";
+            this.yetkiDataGridViewTextBoxColumn.HeaderText = "Yetki";
+            this.yetkiDataGridViewTextBoxColumn.Name = "yetkiDataGridViewTextBoxColumn";
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
+            // phoneNumberDataGridViewTextBoxColumn
+            // 
+            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
+            // 
+            // cinsiyetDataGridViewTextBoxColumn
+            // 
+            this.cinsiyetDataGridViewTextBoxColumn.DataPropertyName = "Cinsiyet";
+            this.cinsiyetDataGridViewTextBoxColumn.HeaderText = "Cinsiyet";
+            this.cinsiyetDataGridViewTextBoxColumn.Name = "cinsiyetDataGridViewTextBoxColumn";
+            // 
             // FormNewUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(694, 448);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btSil);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label9);
@@ -403,11 +594,10 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.mtbDogum);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cbSube);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbKulTip);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbTel);
             this.Controls.Add(this.txbEmail);
@@ -424,6 +614,17 @@
             this.Name = "FormNewUser";
             this.Text = "Kullanıcı Ekleme";
             this.Load += new System.EventHandler(this.FormNewUser_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.citiesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m303SalesDBDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m303SalesDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m303SalesDBDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newUserBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m303SalesDBDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m303SalesDBDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m303SalesDBDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newUserBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -444,11 +645,10 @@
         private System.Windows.Forms.TextBox txbNewPass;
         private System.Windows.Forms.TextBox txbNewUserName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbKulTip;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbSube;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.MaskedTextBox mtbDogum;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -457,5 +657,32 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btSil;
+        private System.Windows.Forms.BindingSource m303SalesDBDataSetBindingSource;
+        private M303SalesDBDataSet m303SalesDBDataSet;
+        private System.Windows.Forms.BindingSource citiesBindingSource;
+        private M303SalesDBDataSetTableAdapters.CitiesTableAdapter citiesTableAdapter;
+        private M303SalesDBDataSet1 m303SalesDBDataSet1;
+        private System.Windows.Forms.BindingSource newUserBindingSource;
+        private M303SalesDBDataSet1TableAdapters.NewUserTableAdapter newUserTableAdapter;
+        private M303SalesDBDataSet2 m303SalesDBDataSet2;
+        private System.Windows.Forms.BindingSource employeesBindingSource;
+        private M303SalesDBDataSet2TableAdapters.EmployeesTableAdapter employeesTableAdapter;
+        private M303SalesDBDataSet3 m303SalesDBDataSet3;
+        private System.Windows.Forms.BindingSource employeesBindingSource1;
+        private M303SalesDBDataSet3TableAdapters.EmployeesTableAdapter employeesTableAdapter1;
+        private M303SalesDBDataSet4 m303SalesDBDataSet4;
+        private System.Windows.Forms.BindingSource newUserBindingSource1;
+        private M303SalesDBDataSet4TableAdapters.NewUserTableAdapter newUserTableAdapter1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn newUserIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn middleInitialDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userPassDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn yetkiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cinsiyetDataGridViewTextBoxColumn;
     }
 }

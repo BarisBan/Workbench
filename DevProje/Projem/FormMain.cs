@@ -59,7 +59,8 @@ namespace Projem
 
         private void kullanıcılarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FormUserSettings formUserSettings = new FormUserSettings();
+            formUserSettings.Show();
         }
     }
 }

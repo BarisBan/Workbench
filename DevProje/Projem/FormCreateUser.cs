@@ -74,10 +74,17 @@ namespace Projem
             string ad = txbNewFirstName.Text;
             string soyad = txbNewLastName.Text;
             string tel = txbPhone.Text;
+            string email = txbEmail.Text;
             string user = txbNewUserName.Text;
             string pass = txbNewPass.Text;
             string passcheck = txbCheck.Text;
             DateTime birthday = Convert.ToDateTime(dtNewBirth.Text);
+            string cinsiyet = "";                
+            bool isChecked = rbKadın.Checked;
+            if (isChecked)
+                cinsiyet = rbKadın.Text;
+            else
+                cinsiyet = rbErkek.Text;
 
             //email Konntrolü
 
@@ -110,7 +117,7 @@ namespace Projem
                 return;
             }
             // mail adres kontroü
-            check = helper.MailIsAccept(txbEmail.Text);
+            check = helper.MailIsAccept(email);
             if (check)
             {
 
@@ -155,15 +162,36 @@ namespace Projem
                 check = true;
             }
             // kontroller uygunsa Veritabanına atılacak            
+
+            #endregion
             if (check == true)
+
             {
 
                 MessageBox.Show("Kaydınız işleme alınmıştır. İşlem tamamlandığında bilgilendiriliceksiniz", "Kayıt Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    SqlConnection connect = new SqlConnection(ConnectionHelper.GetConnectionString());
+                    connect.Open();
+
+                try
+                {
+                    byte yetki = 0;
+
+                    string tel2 = helper.PhoneCorrector(tel);                   
+
+                    string orta = "";
+                    SqlCommand command = new SqlCommand(ConnectionHelper.CreateNewUserString(ad, orta, soyad, user, pass, yetki.ToString(), email, tel2, cinsiyet), connect);
+
+                    command.ExecuteNonQuery();
 
 
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Niye böyle oldu yaa", "Bir hata Saptandı", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                   
+                }
+                connect.Close();
             }
-
-            #endregion
             
                 
         }
