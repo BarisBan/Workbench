@@ -49,6 +49,7 @@
             this.txbUserName.Size = new System.Drawing.Size(132, 24);
             this.txbUserName.TabIndex = 0;
             this.txbUserName.Text = "Kullanıcı Adı";
+            this.txbUserName.TextChanged += new System.EventHandler(this.txbUserName_TextChanged);
             // 
             // txbPass
             // 
@@ -63,7 +64,7 @@
             this.txbPass.PasswordChar = '*';
             this.txbPass.Size = new System.Drawing.Size(132, 23);
             this.txbPass.TabIndex = 1;
-            this.txbPass.Text = "Şifre";
+            this.txbPass.Text = "Sifre";
             this.txbPass.TextChanged += new System.EventHandler(this.txbPass_TextChanged);
             // 
             // btBaglan

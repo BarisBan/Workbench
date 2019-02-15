@@ -15,6 +15,9 @@ namespace Projem
     public partial class FormLogin : Form
     {
         
+            FormMain formMain = new FormMain();
+            FormCreateUser formCreateUser = new FormCreateUser();
+            FormForgetMyPassword formForgetMyPassword = new FormForgetMyPassword();
 
         public FormLogin()
         {
@@ -30,7 +33,6 @@ namespace Projem
         {
 
       
-            FormMain formMain = new FormMain();
             SqlConnection connect = new SqlConnection(ConnectionHelper.GetConnectionString());
             connect.Open();
 
@@ -57,7 +59,8 @@ namespace Projem
                         formMain.satısToolStripMenuItem.Enabled = true;
                         formMain.stockToolStripMenuItem.Enabled = true;
                         formMain.raporlarToolStripMenuItem.Enabled = true;
-                        Helper.OpenNewFormMain();
+                        formMain.Text = formMain.Text + $" Yetkili {dt.Rows[0][1].ToString()} {dt.Rows[0][3].ToString()}";
+                        formMain.Show();
                         this.Hide();
                     }
                     else
@@ -68,7 +71,8 @@ namespace Projem
                         formMain.satısToolStripMenuItem.Enabled = true;
                         formMain.stockToolStripMenuItem.Enabled = true;
                         formMain.raporlarToolStripMenuItem.Enabled = true;
-                        Helper.OpenNewFormMain();
+                        formMain.Text = formMain.Text + $" Personel {dt.Rows[0][1].ToString()} {dt.Rows[0][3].ToString()}";
+                        formMain.Show();
                         this.Hide();
                     }
                 }
@@ -84,7 +88,7 @@ namespace Projem
 
         private void btnKayıtOl_Click(object sender, EventArgs e)
         {
-            Helper.OpenNewFormCreateUser();
+            formCreateUser.Show();
             this.Hide();
 
         }
@@ -96,8 +100,13 @@ namespace Projem
 
         private void btUnut_Click(object sender, EventArgs e)
         {
-            Helper.OpenNewFormForgetMyPassword();
+            formForgetMyPassword.Show();
             this.Hide();
+        }
+
+        private void txbUserName_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

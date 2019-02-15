@@ -119,6 +119,7 @@
             this.Controls.Add(this.btCreateUser);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormUserSettings";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kullanıcı İşemleri";
             this.Load += new System.EventHandler(this.FormUserSettings_Load);
             this.ResumeLayout(false);

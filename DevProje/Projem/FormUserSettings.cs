@@ -12,6 +12,10 @@ namespace Projem
 {
     public partial class FormUserSettings : Form
     {
+            FormNewUser formNewUser = new FormNewUser();
+            FormDeleteUser formDeleteUser = new FormDeleteUser();
+            FormUserUpdate formUserUpdate = new FormUserUpdate();
+            FormMain formMain = new FormMain();
         public FormUserSettings()
         {
             InitializeComponent();
@@ -19,27 +23,27 @@ namespace Projem
 
         private void btCreateUser_Click(object sender, EventArgs e)
         {
-            Helper.OpenNewFormNewUser();
+            formNewUser.Show();
             this.Hide();
         }
 
         private void btDeleteUser_Click(object sender, EventArgs e)
         {
-            Helper.OpenNewFormDeleteUser();
+            formDeleteUser.Show();
             this.Hide();
 
         }
 
         private void btUpdateUser_Click(object sender, EventArgs e)
         {
-            Helper.OpenNewFormUserUdate();
+            formUserUpdate.Show(); 
             this.Hide();
 
         }
 
         private void btExit_Click(object sender, EventArgs e)
         {
-            Helper.OpenNewFormMain();
+            
             this.Hide();
         }
 

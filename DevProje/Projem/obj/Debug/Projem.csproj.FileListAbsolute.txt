@@ -62,3 +62,6 @@ D:\GitProje\Projelerim\Kurtarma\DevProje\Projem\obj\Debug\Projem.FormForgetMyPas
 D:\GitProje\Projelerim\Kurtarma\DevProje\Projem\obj\Debug\Projem.FormNewUser.resources
 D:\GitProje\Projelerim\Kurtarma\DevProje\Projem\obj\Debug\Projem.FormUserUpdate.resources
 D:\GitProje\Projelerim\Kurtarma\DevProje\Projem\obj\Debug\Projem.FormStock.resources
+C:\Users\osman.ban\Documents\git-Baris\Kurtarma\DevProje\Projem\obj\Debug\Projem.FormUrun.resources
+C:\Users\osman.ban\Documents\git-Baris\Kurtarma\DevProje\Projem\obj\Debug\Projem.FormSube.resources
+C:\Users\osman.ban\Documents\git-Baris\Kurtarma\DevProje\Projem\obj\Debug\Projem.FormAbout.resources

@@ -13,6 +13,7 @@ namespace Projem
 {
     public partial class FormNewUser : Form
     {
+        FormMain formMain = new FormMain();
         public FormNewUser()
         {
             InitializeComponent();
@@ -47,61 +48,89 @@ namespace Projem
 
         private void btOnay_Click(object sender, EventArgs e)
         {
-            Helper helper = new Helper(); 
-            
-            DialogResult box= MessageBox.Show("Kişiyi eklemek istediğinizden emin misiniz?", "Soru", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            Helper helper = new Helper();
 
-            if(box==DialogResult.Yes)
+            if (cbKulTip.SelectedItem != null)
             {
-                string ad = txbNewFirstName.Text;
-                string orta = "0";
-                string soyad = txbNewLastName.Text;
-                string username = txbNewUserName.Text;
-                string userpass = txbNewPass.Text;
-                string yetki = cbKulTip.SelectedText;
-                string email = txbEmail.Text;
-                string tel = txbPhone.Text;
-                string sube = cbSube.SelectedValue.ToString();
-                string cinsiyet = "";
-                bool isChecked = rbKadın.Checked;
-                if (isChecked)
-                    cinsiyet = rbKadın.Text;
-                else
 
-                    cinsiyet = rbErkek.Text;
-                if (yetki == "Yetkili")
-                    yetki = "1";
-                else
-                    yetki = "0";
+                DialogResult box = MessageBox.Show("Kişiyi eklemek istediğinizden emin misiniz?", "Soru", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                string aktiflik = "1";
-
-                string phone = helper.PhoneCorrector(tel);
-
-                SqlConnection connect = new SqlConnection(ConnectionHelper.GetConnectionString());
-                connect.Open();
-
-                SqlCommand command = new SqlCommand("Insert Into Employees values('" + ad.Trim() + "','" + orta.Trim() + "','" + soyad.Trim() + "','" + username.Trim() + "','" + userpass.Trim() + "','" + yetki.Trim() + "','" + email.Trim() + "','" + phone.Trim() + "','"+sube+ "','" + cinsiyet.Trim() + "','"+ aktiflik.Trim() + "')",connect);
-
-                int secilen = dataGridView1.SelectedCells[0].RowIndex;
-                string ID=dataGridView1.Rows[secilen].Cells[0].Value.ToString();
-                SqlCommand com2 = new SqlCommand("Delete From NewUser Where NewUserID="+ID.Trim(),connect);
-                command.ExecuteNonQuery();
-                connect.Close();
-
-               DialogResult box1 = MessageBox.Show("Kişi Başarıyla Kayıt Edilmiştir."," Bilgilendirme",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                if(box1== DialogResult.OK)
+                if (box == DialogResult.Yes)
                 {
-                    dataGridView1.Refresh();
-                }
+                    string email = txbEmail.Text;
+                    bool Varmi = helper.MailIsAccept(email);
+                    if (Varmi != true)
+                    {
 
+                        string ad = txbNewFirstName.Text;
+                        string orta = "0";
+                        string soyad = txbNewLastName.Text;
+                        string username = txbNewUserName.Text;
+                        string userpass = txbNewPass.Text;
+                        string yetki = cbKulTip.SelectedText;
+                        string tel = txbPhone.Text;
+                        string sube = cbSube.SelectedValue.ToString();
+                        string cinsiyet = "";
+                        bool isChecked = rbKadın.Checked;
+                        if (isChecked)
+                            cinsiyet = rbKadın.Text;
+                        else
+
+                            cinsiyet = rbErkek.Text;
+                        if (yetki == "Yetkili")
+                            yetki = "1";
+                        else
+                            yetki = "0";
+
+                        string aktiflik = "1";
+
+                        string phone = helper.PhoneCorrector(tel);
+
+                        SqlConnection connect = new SqlConnection(ConnectionHelper.GetConnectionString());
+                        connect.Open();
+
+                        SqlCommand command = new SqlCommand("Insert Into Employees values('" + ad.Trim() + "','" + orta.Trim() + "','" + soyad.Trim() + "','" + username.Trim() + "','" + userpass.Trim() + "','" + yetki.Trim() + "','" + email.Trim() + "','" + phone.Trim() + "','" + sube + "','" + cinsiyet.Trim() + "','" + aktiflik.Trim() + "')", connect);
+
+                        int secilen = dataGridView1.SelectedCells[0].RowIndex;
+                        string ID = dataGridView1.Rows[secilen].Cells[0].Value.ToString();
+                        SqlCommand com2 = new SqlCommand("Delete From NewUser Where NewUserID=" + ID.Trim(), connect);
+                        com2.ExecuteNonQuery();
+                        connect.Close();
+
+                        DialogResult box1 = MessageBox.Show("Kişi Başarıyla Kayıt Edilmiştir.", " Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (box1 == DialogResult.OK)
+                        {
+                            SqlConnection con = new SqlConnection(ConnectionHelper.GetConnectionString());
+                            con.Open();
+
+                            SqlDataAdapter da = new SqlDataAdapter("Select * from NewUser", con);
+
+                            DataTable dt = new DataTable();
+                            da.Fill(dt);
+
+                            dataGridView1.DataSource = dt;
+                            con.Close();
+
+
+                        }
+
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Kişi daha önce kayıt edilmiş.", " Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("İşlem iptal edildi");
+                }
 
             }
             else
             {
-                MessageBox.Show("İşlem iptal edildi");
+                MessageBox.Show("Lütfen Kullanıcı Tipini Seçin.", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
         }
 
         private void btSil_Click(object sender, EventArgs e)
@@ -111,19 +140,28 @@ namespace Projem
             if (box == DialogResult.Yes)
             {
                 int secilen = dataGridView1.SelectedCells[0].RowIndex;
-                 string ID= dataGridView1.Rows[secilen].Cells[0].Value.ToString();
-                
+                string ID = dataGridView1.Rows[secilen].Cells[0].Value.ToString();
+
                 SqlConnection connect = new SqlConnection(ConnectionHelper.GetConnectionString());
                 connect.Open();
 
-                SqlCommand command = new SqlCommand("DELETE FROM NewUser WHERE NewUserID="+ ID.Trim(),connect);
+                SqlCommand command = new SqlCommand("DELETE FROM NewUser WHERE NewUserID=" + ID.Trim(), connect);
                 command.ExecuteNonQuery();
                 connect.Close();
 
                 DialogResult box1 = MessageBox.Show("Kişi Başarıyla Silindi.", " Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (box1 == DialogResult.OK)
                 {
-                    dataGridView1.Refresh();
+                    SqlConnection con = new SqlConnection(ConnectionHelper.GetConnectionString());
+                    con.Open();
+
+                    SqlDataAdapter da = new SqlDataAdapter("Select * from NewUser", con);
+
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    dataGridView1.DataSource = dt;
+                    con.Close();
                 }
 
 
@@ -136,7 +174,7 @@ namespace Projem
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Helper.OpenNewFormMain();
+            
             this.Hide();
         }
 
@@ -148,7 +186,7 @@ namespace Projem
             string soyad = dataGridView1.Rows[secilen].Cells[3].Value.ToString();
             string username = dataGridView1.Rows[secilen].Cells[4].Value.ToString();
             string sifre = dataGridView1.Rows[secilen].Cells[5].Value.ToString();
-            string yetki= dataGridView1.Rows[secilen].Cells[6].Value.ToString();
+            string yetki = dataGridView1.Rows[secilen].Cells[6].Value.ToString();
             string email = dataGridView1.Rows[secilen].Cells[7].Value.ToString();
             string tel = dataGridView1.Rows[secilen].Cells[8].Value.ToString();
             string cinsiyet = dataGridView1.Rows[secilen].Cells[9].Value.ToString();
@@ -159,7 +197,7 @@ namespace Projem
             txbNewPass.Text = sifre;
             txbEmail.Text = email;
             txbPhone.Text = tel;
-            if(cinsiyet=="Erkek")
+            if (cinsiyet == "Erkek")
             {
                 rbErkek.Select();
             }
@@ -169,7 +207,7 @@ namespace Projem
             }
 
 
-            
+
         }
 
         private void dataGridView1_DoubleClick(object sender, EventArgs e)
@@ -199,6 +237,11 @@ namespace Projem
             {
                 rbKadın.Select();
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

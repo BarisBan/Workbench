@@ -13,6 +13,8 @@ namespace Projem
 {
     public partial class FormCreateUser : Form
     {
+        FormMain formMain = new FormMain();
+            
         
         public FormCreateUser()
         {
@@ -173,7 +175,7 @@ namespace Projem
                 }
                 connect.Close();
 
-                Helper.OpenNewFormMain();
+                    formMain.Show();
                 this.Hide();
                 
             }
@@ -188,7 +190,7 @@ namespace Projem
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Helper.OpenNewFormMain();
+            
             this.Hide();
         }
     }

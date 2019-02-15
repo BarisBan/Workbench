@@ -286,7 +286,6 @@
             // 
             // cbSube
             // 
-            this.cbSube.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.citiesBindingSource, "Şube", true));
             this.cbSube.DataSource = this.citiesBindingSource;
             this.cbSube.DisplayMember = "Şube";
             this.cbSube.FormattingEnabled = true;
@@ -514,6 +513,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(679, 165);
             this.dataGridView1.TabIndex = 335;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
             // 
             // newUserIDDataGridViewTextBoxColumn

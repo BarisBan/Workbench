@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Threading;
 namespace Projem
 {
     public partial class FormMain : Form
@@ -31,18 +31,28 @@ namespace Projem
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-
+            
+            
 
 
 
 
         }
 
+        private void kullanıcılarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormUserSettings formUserSettings = new FormUserSettings();
+            formUserSettings.Show();
+            
+            
+        }
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            Helper.OpenNewFormLogin();
+            FormLogin formLogin = new FormLogin();
+            formLogin.Show();
             this.Hide();
+            
             
         }
 
@@ -56,12 +66,6 @@ namespace Projem
             Application.Exit();
         }
 
-        private void kullanıcılarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Helper.OpenNewFormUserSettings();
-            this.Hide();
-            
-        }
 
         private void stockToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -70,6 +74,20 @@ namespace Projem
 
         private void hakkındaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            FormAbout formAbout = new FormAbout();
+            formAbout.Show();
+        }
+
+        private void ürünlerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormUrun formUrun = new FormUrun();
+            formUrun.Show();
+        }
+
+        private void şubelerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormSube sube = new FormSube();
+            sube.Show();
 
         }
     }
