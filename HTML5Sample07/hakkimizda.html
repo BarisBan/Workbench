@@ -1,0 +1,378 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Ücretsiz Kurumsal Temal | omerbozalan.com</title>
+	<meta name="keywords" content="../">
+	<meta name="description" content="../">
+	<meta name="author" content="Adem Coşkun">
+	<meta name="classification" content="web tasarım">
+	<meta name="googlebot" content="All, Index, Follow" />
+	<meta name="Robots" content="All, Index, Follow" />
+	<meta name="revisit-after" content="7 days">
+	<meta name="rating" content="General" />
+	<meta name="expires" content="no" />
+	<meta name="language" content="turkish, TR" />
+	<meta name="distribution" content="Global" />
+	<meta name="googlebot" content="NOODP" />
+	<meta name="robots" content="all" />
+	<meta name="robots" content="follow" />
+	<meta name="robots" content="index" />
+	<meta name="distribution" content="global" />
+	<meta name="revisit-after" content="1 Day" />
+	<meta http-equiv="Copyright" content="Copyright © webturkuaz.com">
+
+	<!-- ============ Styles ============ -->
+	<link rel="stylesheet" href="assets/styles/reset.css" type="text/css" />
+	<link rel="stylesheet" href="assets/styles/custom.css" type="text/css" />
+	<link rel="stylesheet" href="assets/font/font.css" type="text/css" />
+
+	<!-- ============ Font-Awesome ============ -->
+	<link rel="stylesheet" href="assets/styles/font-awesome.css" type="text/css" />
+
+	<!-- ============ Mobil CSS ============ -->
+	<link rel="stylesheet" href="assets/mobile/media-queries.css" type="text/css" />
+
+	<!-- ============ Google Font ============ -->
+
+	<!-- ============ Fav-Icon ============ -->
+	<link rel="Shortcut Icon" href="assets/images/icons/fav_icon.png" type="image/x-icon">
+    
+    <!-- Scripts -->
+	<script type="text/javascript" src="assets/scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/custom.js"></script>
+
+
+    <!-- Add jQuery assetsrary -->
+	<script type="text/javascript" src="assets/scripts/jquery-1.10.1.min.js"></script>
+
+	<!-- Add mousewheel plugin (this is optional) -->
+	<script type="text/javascript" src="assets/scripts/jquery.mousewheel-3.0.6.pack.js"></script>
+
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="assets/source/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="assets/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+	<!-- Add Button helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="assets/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+	<script type="text/javascript" src="assets/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+
+	<!-- Add Thumbnail helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="assets/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+	<script type="text/javascript" src="assets/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+	<!-- Add Media helper (this is optional) -->
+	<script type="text/javascript" src="assets/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			 *  Simple image gallery. Uses default settings
+			 */
+
+			$('.fancybox').fancybox();
+
+			/*
+			 *  Different effects
+			 */
+
+			// Change title type, overlay closing speed
+			$(".fancybox-effects-a").fancybox({
+				helpers: {
+					title : {
+						type : 'outside'
+					},
+					overlay : {
+						speedOut : 0
+					}
+				}
+			});
+
+			// Disable opening and closing animations, change title type
+			$(".fancybox-effects-b").fancybox({
+				openEffect  : 'none',
+				closeEffect	: 'none',
+
+				helpers : {
+					title : {
+						type : 'over'
+					}
+				}
+			});
+
+			// Set custom style, close if clicked, change title type and overlay color
+			$(".fancybox-effects-c").fancybox({
+				wrapCSS    : 'fancybox-custom',
+				closeClick : true,
+
+				openEffect : 'none',
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					overlay : {
+						css : {
+							'background' : 'rgba(238,238,238,0.85)'
+						}
+					}
+				}
+			});
+
+			// Remove padding, set opening and closing animations, close if clicked and disable overlay
+			$(".fancybox-effects-d").fancybox({
+				padding: 0,
+
+				openEffect : 'elastic',
+				openSpeed  : 150,
+
+				closeEffect : 'elastic',
+				closeSpeed  : 150,
+
+				closeClick : true,
+
+				helpers : {
+					overlay : null
+				}
+			});
+
+			/*
+			 *  Button helper. Disable animations, hide close button, change title type and content
+			 */
+
+			$('.fancybox-buttons').fancybox({
+				openEffect  : 'none',
+				closeEffect : 'none',
+
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					buttons	: {}
+				},
+
+				afterLoad : function() {
+					this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+				}
+			});
+
+
+			/*
+			 *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
+			 */
+
+			$('.fancybox-thumbs').fancybox({
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+				arrows    : false,
+				nextClick : true,
+
+				helpers : {
+					thumbs : {
+						width  : 50,
+						height : 50
+					}
+				}
+			});
+
+			/*
+			 *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
+			*/
+			$('.fancybox-media')
+				.attr('rel', 'media-gallery')
+				.fancybox({
+					openEffect : 'none',
+					closeEffect : 'none',
+					prevEffect : 'none',
+					nextEffect : 'none',
+
+					arrows : false,
+					helpers : {
+						media : {},
+						buttons : {}
+					}
+				});
+
+			/*
+			 *  Open manually
+			 */
+
+			$("#fancybox-manual-a").click(function() {
+				$.fancybox.open('1_b.jpg');
+			});
+
+			$("#fancybox-manual-b").click(function() {
+				$.fancybox.open({
+					href : 'iframe.html',
+					type : 'iframe',
+					padding : 5
+				});
+			});
+
+			$("#fancybox-manual-c").click(function() {
+				$.fancybox.open([
+					{
+						href : '1_b.jpg',
+						title : 'My title'
+					}, {
+						href : '2_b.jpg',
+						title : '2nd title'
+					}, {
+						href : '3_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+
+
+		});
+	</script>
+
+	<!-- ============ Simple image gallery ============ -->
+	<!-- <a class="fancybox" href="1_b.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="1_s.jpg" alt="" /></a> -->
+
+	<!-- ============ Different effects ============ -->
+	<!-- <a class="fancybox-effects-a" href="5_b.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit"><img src="5_s.jpg" alt="" /></a> -->
+
+</head>
+
+<body>
+<!-- enust -->
+<div class="enust">
+	<!-- ortala -->
+	<div class="ortala">
+		<a href="index.html" class="logo"><img src="assets/images/logo.png"></a>
+	</div><!-- ortala -->
+</div><!-- enust -->
+
+<!-- enust-alt -->
+<div class="enust-alt">
+	<!-- ortala -->
+	<div class="ortala">
+		<!-- menu -->
+		<div class="menu">
+			<a href="index.html" class="anasayfa">
+				<img src="assets/images/home_icon.png" widht="17" height="20" alt="">
+			</a>
+			<span class="menu_home_line"></span>
+			<ul>
+				<li><a href="hakkimizda.html">hakkımızda</a></li>
+				<li><a href="projeler.html">projelerimiz</a></li>
+				<li><a href="araclar.html">araçlar</a></li>
+				<li><a href="iletisim.html">iletişim</a></li>
+			</ul>
+		</div><!-- menu -->
+	</div><!-- ortala -->
+</div><!-- enust-alt -->
+
+<!-- orta -->
+<div class="orta">
+	<!-- ortala -->
+	<div class="ortala">
+		<div class="icerik">
+
+			<div class="clear"></div>
+			<a href="#" class="ghg" style="background: url('assets/images/hakkimizda_img.jpg') no-repeat;"><h2 class="hakkimizda_baslik">HAKKIMIZDA</h2></a>
+			<div class="hakkimizda_box_bg">
+
+				<a href="#" class="icerik_yazi_baslik">
+					Hakkımızda
+				</a>
+				<div class="clear"></div>
+				<span class="icerik_yazi">	
+					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+				</span>
+
+				<a href="#" class="icerik_yazi_baslik">
+					Misyon
+				</a>
+				<div class="clear"></div>
+				<span class="icerik_yazi">	
+					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+				</span>
+
+				<a href="#" class="icerik_yazi_baslik">
+					Vizyon
+				</a>
+				<div class="clear"></div>
+				<span class="icerik_yazi">	
+					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+				</span>
+
+			</div>
+			<div class="hakkimizda_box_bg_bottom"></div>
+
+		</div>
+
+		<!-- duyuru_box_bg -->
+		<div class="duyuru_box_bg">
+			<h2 class="duyuru_baslik">Duyurular ve Haberler</h2>
+			<!-- duyuru_degis_bg -->
+			<div class="duyuru_degis_bg">
+				<span class="duyuru_degis_left"></span>
+				<span class="duyuru_degis_right"></span>
+			</div><!-- duyuru_degis_bg -->
+
+			<div class="clear"></div>
+
+			<!-- duyuru_icon -->
+			<div class="duyuru_icon">
+				<img src="assets/images/duyuru_icon.png" width="6" height="10" alt="Web Turkuaz" />
+			</div><!-- duyuru_icon -->
+
+			<!-- duyuru -->
+			<div class="duyuru">
+				<ul>
+					<li><a href="#">Lorem Ipsum is simply 1</a></li>
+					<li><a href="#">Lorem Ipsum is simply 2</a></li>
+					<li><a href="#"> Lorem Ipsum is simply 3</a></li>
+				</ul>
+			</div><!-- duyuru -->
+
+		</div><!-- duyuru_box_bg -->
+
+	</div><!-- ortala -->
+</div><!-- orta -->
+
+<!-- enalt -->
+<div class="enalt">
+	<!-- ortala -->
+	<div class="ortala">
+		<!-- enalt_yazi -->
+		<span class="enalt_yazi">Copyright © 2014. Tüm hakları <font color="#ba272d">www.webturkuaz.com</font> aittir.</span><!-- enalt_yazi -->
+
+		<!-- icon -->
+		<span class="icon">
+			<a target="_blank" href="#"><img src="assets/images/g.jpg"></a>
+		</span><!-- icon -->
+
+		<!-- icon -->
+		<span class="icon">
+			<a target="_blank" href="#"><img src="assets/images/t.jpg"></a>
+		</span><!-- icon -->
+		
+		<!-- icon -->
+		<span class="icon">
+			<a target="_blank" href="https://www.facebook.com/"><img src="assets/images/f.jpg"></a>
+		</span><!-- icon -->
+	</div><!-- ortala -->
+</div><!-- enalt -->
+
+
+</body>
+</html>
