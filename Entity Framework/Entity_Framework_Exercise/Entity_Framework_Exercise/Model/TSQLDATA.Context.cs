@@ -13,10 +13,10 @@ namespace Entity_Framework_Exercise.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class NorthwindEntities : DbContext
+    public partial class TSQLDATAEntities : DbContext
     {
-        public NorthwindEntities()
-            : base("name=NorthwindEntities")
+        public TSQLDATAEntities()
+            : base("name=TSQLDATAEntities")
         {
         }
     
@@ -25,17 +25,16 @@ namespace Entity_Framework_Exercise.Model
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Category> Categories { get; set; }
-        public virtual DbSet<CustomerDemographic> CustomerDemographics { get; set; }
-        public virtual DbSet<Customer> Customers { get; set; }
+        public virtual DbSet<Num> Nums { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
-        public virtual DbSet<Order_Detail> Order_Details { get; set; }
-        public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Product> Products { get; set; }
-        public virtual DbSet<Region> Regions { get; set; }
-        public virtual DbSet<Shipper> Shippers { get; set; }
         public virtual DbSet<Supplier> Suppliers { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
-        public virtual DbSet<Territory> Territories { get; set; }
+        public virtual DbSet<Customer> Customers { get; set; }
+        public virtual DbSet<OrderDetail> OrderDetails { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<Shipper> Shippers { get; set; }
+        public virtual DbSet<Score> Scores { get; set; }
+        public virtual DbSet<Test> Tests { get; set; }
     }
 }

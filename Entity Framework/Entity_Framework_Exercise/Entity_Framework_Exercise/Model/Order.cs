@@ -17,28 +17,28 @@ namespace Entity_Framework_Exercise.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Order()
         {
-            this.Order_Details = new HashSet<Order_Detail>();
+            this.OrderDetails = new HashSet<OrderDetail>();
         }
     
-        public int OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public Nullable<int> EmployeeID { get; set; }
-        public Nullable<System.DateTime> OrderDate { get; set; }
-        public Nullable<System.DateTime> RequiredDate { get; set; }
-        public Nullable<System.DateTime> ShippedDate { get; set; }
-        public Nullable<int> ShipVia { get; set; }
-        public Nullable<decimal> Freight { get; set; }
-        public string ShipName { get; set; }
-        public string ShipAddress { get; set; }
-        public string ShipCity { get; set; }
-        public string ShipRegion { get; set; }
-        public string ShipPostalCode { get; set; }
-        public string ShipCountry { get; set; }
+        public int orderid { get; set; }
+        public Nullable<int> custid { get; set; }
+        public int empid { get; set; }
+        public System.DateTime orderdate { get; set; }
+        public System.DateTime requireddate { get; set; }
+        public Nullable<System.DateTime> shippeddate { get; set; }
+        public int shipperid { get; set; }
+        public decimal freight { get; set; }
+        public string shipname { get; set; }
+        public string shipaddress { get; set; }
+        public string shipcity { get; set; }
+        public string shipregion { get; set; }
+        public string shippostalcode { get; set; }
+        public string shipcountry { get; set; }
     
-        public virtual Customer Customer { get; set; }
         public virtual Employee Employee { get; set; }
+        public virtual Customer Customer { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Order_Detail> Order_Details { get; set; }
+        public virtual ICollection<OrderDetail> OrderDetails { get; set; }
         public virtual Shipper Shipper { get; set; }
     }
 }

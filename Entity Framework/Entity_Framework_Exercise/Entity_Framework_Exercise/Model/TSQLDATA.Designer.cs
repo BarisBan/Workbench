@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'D:\GitProje\Projelerim\Public\Projeler\Entity Framework\Entity_Framework_Exercise\Entity_Framework_Exercise\Model\Northwind.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\USER\source\repos\Entity_Framework_Exercise\Entity_Framework_Exercise\Model\TSQLDATA.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

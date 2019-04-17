@@ -20,9 +20,9 @@ namespace Entity_Framework_Exercise.Model
             this.Orders = new HashSet<Order>();
         }
     
-        public int ShipperID { get; set; }
-        public string CompanyName { get; set; }
-        public string Phone { get; set; }
+        public int shipperid { get; set; }
+        public string companyname { get; set; }
+        public string phone { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Orders { get; set; }

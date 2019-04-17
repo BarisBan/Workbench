@@ -12,15 +12,12 @@ namespace Entity_Framework_Exercise.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Order_Detail
+    public partial class Score
     {
-        public int OrderID { get; set; }
-        public int ProductID { get; set; }
-        public decimal UnitPrice { get; set; }
-        public short Quantity { get; set; }
-        public float Discount { get; set; }
+        public string testid { get; set; }
+        public string studentid { get; set; }
+        public byte score1 { get; set; }
     
-        public virtual Order Order { get; set; }
-        public virtual Product Product { get; set; }
+        public virtual Test Test { get; set; }
     }
 }

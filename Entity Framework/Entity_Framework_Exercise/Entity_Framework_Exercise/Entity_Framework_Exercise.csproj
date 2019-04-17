@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A32FF277-48C4-49FC-A6B6-8AE8F97696A7}</ProjectGuid>
+    <ProjectGuid>{841E6736-1DBB-469A-8580-A78BC01826D9}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Entity_Framework_Exercise</RootNamespace>
     <AssemblyName>Entity_Framework_Exercise</AssemblyName>
@@ -62,55 +62,52 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Category.cs">
-      <DependentUpon>Northwind.tt</DependentUpon>
+      <DependentUpon>TSQLDATA.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Customer.cs">
-      <DependentUpon>Northwind.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\CustomerDemographic.cs">
-      <DependentUpon>Northwind.tt</DependentUpon>
+      <DependentUpon>TSQLDATA.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Employee.cs">
-      <DependentUpon>Northwind.tt</DependentUpon>
+      <DependentUpon>TSQLDATA.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Northwind.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Northwind.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Northwind.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Northwind.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Northwind.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Northwind.edmx</DependentUpon>
+    <Compile Include="Model\Num.cs">
+      <DependentUpon>TSQLDATA.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Order.cs">
-      <DependentUpon>Northwind.tt</DependentUpon>
+      <DependentUpon>TSQLDATA.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Order_Detail.cs">
-      <DependentUpon>Northwind.tt</DependentUpon>
+    <Compile Include="Model\OrderDetail.cs">
+      <DependentUpon>TSQLDATA.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Product.cs">
-      <DependentUpon>Northwind.tt</DependentUpon>
+      <DependentUpon>TSQLDATA.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Region.cs">
-      <DependentUpon>Northwind.tt</DependentUpon>
+    <Compile Include="Model\Score.cs">
+      <DependentUpon>TSQLDATA.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Shipper.cs">
-      <DependentUpon>Northwind.tt</DependentUpon>
+      <DependentUpon>TSQLDATA.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Supplier.cs">
-      <DependentUpon>Northwind.tt</DependentUpon>
+      <DependentUpon>TSQLDATA.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\sysdiagram.cs">
-      <DependentUpon>Northwind.tt</DependentUpon>
+    <Compile Include="Model\Test.cs">
+      <DependentUpon>TSQLDATA.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Territory.cs">
-      <DependentUpon>Northwind.tt</DependentUpon>
+    <Compile Include="Model\TSQLDATA.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TSQLDATA.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TSQLDATA.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TSQLDATA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TSQLDATA.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TSQLDATA.edmx</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -126,12 +123,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EntityDeploy Include="Model\Northwind.edmx">
+    <EntityDeploy Include="Model\TSQLDATA.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Northwind.Designer.cs</LastGenOutput>
+      <LastGenOutput>TSQLDATA.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Model\Northwind.edmx.diagram">
-      <DependentUpon>Northwind.edmx</DependentUpon>
+    <None Include="Model\TSQLDATA.edmx.diagram">
+      <DependentUpon>TSQLDATA.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -147,16 +144,17 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Content Include="Model\Northwind.Context.tt">
+    <Content Include="Model\TSQLDATA.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Northwind.edmx</DependentUpon>
-      <LastGenOutput>Northwind.Context.cs</LastGenOutput>
+      <DependentUpon>TSQLDATA.edmx</DependentUpon>
+      <LastGenOutput>TSQLDATA.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Model\Northwind.tt">
+    <Content Include="Model\TSQLDATA.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Northwind.edmx</DependentUpon>
-      <LastGenOutput>Northwind.cs</LastGenOutput>
+      <DependentUpon>TSQLDATA.edmx</DependentUpon>
+      <LastGenOutput>TSQLDATA.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
