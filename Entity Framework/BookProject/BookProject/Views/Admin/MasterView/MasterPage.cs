@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BookProject.Views.Admin.HomeView
+namespace BookProject.Views.Admin.MasterView
 {
-    public partial class AdminHomePage : Form
+    public partial class MasterPage : Form
     {
-        public AdminHomePage()
+        public MasterPage()
         {
             InitializeComponent();
         }

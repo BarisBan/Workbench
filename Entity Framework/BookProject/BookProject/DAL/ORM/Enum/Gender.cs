@@ -10,6 +10,7 @@ namespace BookProject.DAL.ORM.Enum
     {
         None=0,
         Female=1,
-        Male=2
+        Male=2,
+        Others=3
     }
 }

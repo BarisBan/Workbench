@@ -1,4 +1,6 @@
-﻿using BookProject.Views.Admin.CategoryView;
+﻿using BookProject.Views.Admin.AppUserView;
+using BookProject.Views.Admin.CategoryView;
+using BookProject.Views.Shared.LoginView;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +19,7 @@ namespace BookProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CategoryPage());
+            Application.Run(new LoginPage());
         }
     }
 }

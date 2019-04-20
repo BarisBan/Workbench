@@ -58,7 +58,6 @@
     <Compile Include="DAL\ORM\Entity\BaseEntity.cs" />
     <Compile Include="DAL\ORM\Entity\Book.cs" />
     <Compile Include="DAL\ORM\Entity\Category.cs" />
-    <Compile Include="DAL\ORM\Entity\Product.cs" />
     <Compile Include="DAL\ORM\Enum\Gender.cs" />
     <Compile Include="DAL\ORM\Enum\Role.cs" />
     <Compile Include="DAL\ORM\Enum\Status.cs" />
@@ -66,11 +65,17 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\Admin\AppUserView\AppUserView.cs">
+    <Compile Include="Views\Admin\AppUserView\AppUserPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Admin\AppUserView\AppUserView.Designer.cs">
-      <DependentUpon>AppUserView.cs</DependentUpon>
+    <Compile Include="Views\Admin\AppUserView\AppUserPage.Designer.cs">
+      <DependentUpon>AppUserPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\BookView\BookPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\BookView\BookPage.Designer.cs">
+      <DependentUpon>BookPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Admin\CategoryView\CategoryPage.cs">
       <SubType>Form</SubType>
@@ -78,11 +83,11 @@
     <Compile Include="Views\Admin\CategoryView\CategoryPage.Designer.cs">
       <DependentUpon>CategoryPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Admin\HomeView\AdminHomePage.cs">
+    <Compile Include="Views\Admin\MasterView\MasterPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Admin\HomeView\AdminHomePage.Designer.cs">
-      <DependentUpon>AdminHomePage.cs</DependentUpon>
+    <Compile Include="Views\Admin\MasterView\MasterPage.Designer.cs">
+      <DependentUpon>MasterPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Shared\LoginView\LoginPage.cs">
       <SubType>Form</SubType>
@@ -99,11 +104,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Views\Admin\AppUserView\AppUserView.resx">
-      <DependentUpon>AppUserView.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Admin\AppUserView\AppUserPage.resx">
+      <DependentUpon>AppUserPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Admin\BookView\BookPage.resx">
+      <DependentUpon>BookPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Admin\CategoryView\CategoryPage.resx">
       <DependentUpon>CategoryPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Admin\MasterView\MasterPage.resx">
+      <DependentUpon>MasterPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Shared\LoginView\LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>

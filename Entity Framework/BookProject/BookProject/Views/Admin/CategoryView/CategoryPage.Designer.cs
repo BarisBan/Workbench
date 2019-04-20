@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.grpCategoryAdd = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtCategoryAdd = new System.Windows.Forms.TextBox();
+            this.btnCategoryAdd = new System.Windows.Forms.Button();
             this.txtCategoryDiscriptionAdd = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnCategoryAdd = new System.Windows.Forms.Button();
+            this.txtCategoryAdd = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.grpCategoryList = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.grpCategoryUpdate = new System.Windows.Forms.GroupBox();
@@ -67,22 +67,15 @@
             this.grpCategoryAdd.TabStop = false;
             this.grpCategoryAdd.Text = "Category Add";
             // 
-            // label1
+            // btnCategoryAdd
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Name :";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // txtCategoryAdd
-            // 
-            this.txtCategoryAdd.Location = new System.Drawing.Point(78, 28);
-            this.txtCategoryAdd.Name = "txtCategoryAdd";
-            this.txtCategoryAdd.Size = new System.Drawing.Size(142, 20);
-            this.txtCategoryAdd.TabIndex = 1;
+            this.btnCategoryAdd.Location = new System.Drawing.Point(182, 165);
+            this.btnCategoryAdd.Name = "btnCategoryAdd";
+            this.btnCategoryAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnCategoryAdd.TabIndex = 4;
+            this.btnCategoryAdd.Text = "Submit";
+            this.btnCategoryAdd.UseVisualStyleBackColor = true;
+            this.btnCategoryAdd.Click += new System.EventHandler(this.btnCategoryAdd_Click);
             // 
             // txtCategoryDiscriptionAdd
             // 
@@ -101,15 +94,21 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Description :";
             // 
-            // btnCategoryAdd
+            // txtCategoryAdd
             // 
-            this.btnCategoryAdd.Location = new System.Drawing.Point(182, 165);
-            this.btnCategoryAdd.Name = "btnCategoryAdd";
-            this.btnCategoryAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnCategoryAdd.TabIndex = 4;
-            this.btnCategoryAdd.Text = "Submit";
-            this.btnCategoryAdd.UseVisualStyleBackColor = true;
-            this.btnCategoryAdd.Click += new System.EventHandler(this.btnCategoryAdd_Click);
+            this.txtCategoryAdd.Location = new System.Drawing.Point(78, 28);
+            this.txtCategoryAdd.Name = "txtCategoryAdd";
+            this.txtCategoryAdd.Size = new System.Drawing.Size(142, 20);
+            this.txtCategoryAdd.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(31, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Name :";
             // 
             // grpCategoryList
             // 
