@@ -426,16 +426,17 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellClick);
             // 
-            // AppUserView
+            // AppUserPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 500);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
-            this.Name = "AppUserView";
+            this.Name = "AppUserPage";
             this.Text = "AppUserView";
             this.Load += new System.EventHandler(this.AppUserView_Load);
             this.groupBox1.ResumeLayout(false);

@@ -1,5 +1,6 @@
 ﻿using BookProject.Views.Admin.AppUserView;
 using BookProject.Views.Admin.CategoryView;
+using BookProject.Views.Admin.MasterView;
 using BookProject.Views.Shared.LoginView;
 using System;
 using System.Collections.Generic;

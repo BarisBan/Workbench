@@ -22,9 +22,16 @@ namespace BookProject.Views.Admin.BookView
         void CategoryList()
         {
             cmbBookCategoriesAdd.DataSource = db.Categories.Where(x => x.Status == DAL.ORM.Enum.Status.Active || x.Status == DAL.ORM.Enum.Status.Updated).ToList();
+            cmbBookCategoriesAdd.Text = "CategoryName";
             cmbBookCategoriesAdd.DisplayMember = "CategoryName";
             cmbBookCategoriesAdd.ValueMember = "Id";
             cmbBookCategoriesAdd.SelectedIndex = -1;
+
+            cmbBookCategoriesUpdate.DataSource = db.Categories.Where(x => x.Status == DAL.ORM.Enum.Status.Active || x.Status == DAL.ORM.Enum.Status.Updated).ToList();;
+            cmbBookCategoriesUpdate.Text = "CategoryName";            
+            cmbBookCategoriesUpdate.DisplayMember = "CategoryName"; ;
+            cmbBookCategoriesUpdate.ValueMember = "Id";;
+            cmbBookCategoriesUpdate.SelectedIndex = -1; ;
         }
 
         void AppUserList()
@@ -34,6 +41,13 @@ namespace BookProject.Views.Admin.BookView
             cmbBookAddAuthor.DisplayMember = "FullName";
             cmbBookAddAuthor.ValueMember = "Id";
             cmbBookAddAuthor.SelectedIndex = -1;
+
+            cmbBookAuthorUpdate.DataSource = db.AppUsers.Where(x => x.Status == DAL.ORM.Enum.Status.Active || x.Status == DAL.ORM.Enum.Status.Updated).ToList();
+            cmbBookAuthorUpdate.Text = "FullName";
+            cmbBookAuthorUpdate.DisplayMember = "FullName";
+            cmbBookAuthorUpdate.ValueMember = "Id";
+            cmbBookAuthorUpdate.SelectedIndex = -1;
+
         }
         public void TextBoxEraser()
         {
@@ -133,7 +147,10 @@ namespace BookProject.Views.Admin.BookView
                 book.BookName = txtBookNameAdd.Text;
                 book.BookDescription = txtBookDescriptionAdd.Text;
                 book.CategoryID = (int)cmbBookCategoriesAdd.SelectedValue;
+                book.Category.CategoryName = cmbBookCategoriesAdd.SelectedText;
                 book.AppUserID = (int)cmbBookAddAuthor.SelectedValue;
+                book.AppUser.FullName = cmbBookAddAuthor.SelectedText;
+                
                 book.Status = DAL.ORM.Enum.Status.Active;
                 book.AddDate = DateTime.Now;
 
@@ -165,8 +182,10 @@ namespace BookProject.Views.Admin.BookView
                 Book book = db.Books.FirstOrDefault(x => x.ID == id);
                 book.BookName = txtBookNameUpdate.Text;
                 book.BookDescription = txtBookDescriptionUpdate.Text;
-                book.CategoryID = (int)cmbBookCategoriesAdd.SelectedValue;
-                book.AppUserID = (int)cmbBookAddAuthor.SelectedValue;
+                book.CategoryID = (int)cmbBookCategoriesUpdate.SelectedValue;
+                book.Category.CategoryName = cmbBookCategoriesUpdate.SelectedText;
+                book.AppUserID = (int)cmbBookAuthorUpdate.SelectedValue;
+                book.AppUser.FullName = cmbBookCategoriesUpdate.SelectedText;
                 book.Status = DAL.ORM.Enum.Status.Updated;
                 book.UpdateDate = DateTime.Now;
                 

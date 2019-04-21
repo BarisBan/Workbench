@@ -13,6 +13,7 @@ namespace BookProject.DAL.ORM.Entity
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
+        private string _fullName;
         [NotMapped]
         public string FullName
         {
@@ -26,6 +27,10 @@ namespace BookProject.DAL.ORM.Entity
                 {
                     return FirstName + " " + LastName;
                 }
+            }
+
+            set {
+                _fullName = value;
             }
         }
         public string UserName { get; set; }
