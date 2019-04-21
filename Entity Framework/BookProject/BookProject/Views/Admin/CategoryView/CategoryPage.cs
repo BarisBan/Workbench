@@ -95,10 +95,7 @@ namespace BookProject.Views.Admin.CategoryView
         public void CategoryTakeList()
         {
             dataGridView1.DataSource = db.Categories.Where(x => x.Status == DAL.ORM.Enum.Status.Active || x.Status == DAL.ORM.Enum.Status.Updated).ToList();
-
         }
-
-
 
         private void btnCategoryAdd_Click(object sender, EventArgs e)
         {
@@ -134,7 +131,7 @@ namespace BookProject.Views.Admin.CategoryView
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtCategoryUpdate.Text = dataGridView1.CurrentRow.Cells["CategoryName"].Value.ToString();
-            txtCategoryUpdate.Text = dataGridView1.CurrentRow.Cells["Discription"].Value.ToString();
+            txtCategoryDiscriptionUpdate.Text = dataGridView1.CurrentRow.Cells["Distription"].Value.ToString();
             id = int.Parse(dataGridView1.CurrentRow.Cells["ID"].Value.ToString());
             txtCategoryDelete.Text = dataGridView1.CurrentRow.Cells["ID"].Value.ToString();
         }

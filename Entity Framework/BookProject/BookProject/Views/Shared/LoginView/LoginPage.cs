@@ -48,23 +48,25 @@ namespace BookProject.Views.Shared.LoginView
 
             if (EmptyCatcher())
             {
-                if (db.AppUsers.Any(x => x.UserName == txtUserName.Text && x.Password == txtPassword.Text && x.Status == DAL.ORM.Enum.Status.Active && x.Role == DAL.ORM.Enum.Role.Admin))
+                if (db.AppUsers.Any(x => x.UserName == txtUserName.Text && x.Password == txtPassword.Text && x.Role == DAL.ORM.Enum.Role.Admin && (x.Status == DAL.ORM.Enum.Status.Active || x.Status == DAL.ORM.Enum.Status.Updated)))
                 {
+                    
                     mp.panelToolStripMenuItem.Visible = true;
                     mp.panelToolStripMenuItem.Enabled = true;
                     mp.Show();
                     this.Hide();
 
                 }
-                else if (db.AppUsers.Any(x => x.UserName == txtUserName.Text && x.Password == txtPassword.Text && x.Status == DAL.ORM.Enum.Status.Active && x.Role == DAL.ORM.Enum.Role.Member))
+                else if (db.AppUsers.Any(x => x.UserName == txtUserName.Text && x.Password == txtPassword.Text && x.Role == DAL.ORM.Enum.Role.Member && ( x.Status == DAL.ORM.Enum.Status.Active )))
                 {
+                    
                     mp.panelToolStripMenuItem.Visible = false;
                     mp.Show();
                     this.Hide();
 
 
                 }
-                else if (db.AppUsers.Any(x => x.UserName == txtUserName.Text && x.Password == txtPassword.Text && x.Status == DAL.ORM.Enum.Status.Active && x.Role == DAL.ORM.Enum.Role.Employee))
+                else if (db.AppUsers.Any(x => x.UserName == txtUserName.Text && x.Password == txtPassword.Text && x.Role == DAL.ORM.Enum.Role.Employee  && (x.Status == DAL.ORM.Enum.Status.Active || x.Status == DAL.ORM.Enum.Status.Updated)))
                 {
                     mp.panelToolStripMenuItem.Enabled = true;
                     mp.userPanelToolStripMenuItem.Visible = false;
@@ -72,7 +74,7 @@ namespace BookProject.Views.Shared.LoginView
                     mp.bookPanelToolStripMenuItem.Enabled = true;
                     mp.Show();
                 }
-                else if (db.AppUsers.Any(x => x.UserName == txtUserName.Text && x.Password == txtPassword.Text && x.Status == DAL.ORM.Enum.Status.Active && x.Role == DAL.ORM.Enum.Role.Author))
+                else if (db.AppUsers.Any(x => x.UserName == txtUserName.Text && x.Password == txtPassword.Text && x.Role == DAL.ORM.Enum.Role.Author || (x.Status == DAL.ORM.Enum.Status.Active || x.Status == DAL.ORM.Enum.Status.Updated)))
                 {
                     mp.panelToolStripMenuItem.Enabled = true;
                     mp.userPanelToolStripMenuItem.Visible = false;

@@ -12,5 +12,6 @@ namespace BookProject.DAL.ORM.Enum
         Active =1,
         Updated =2,
         Deleted =3
+        
     }
 }

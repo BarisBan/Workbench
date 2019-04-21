@@ -19,7 +19,7 @@ namespace BookProject.DAL.ORM.Entity
         public DateTime UpdateDate { get { return _updateDate; } set { _updateDate = value; } }
 
         private DateTime _deleteDate = DateTime.Now;
-        public DateTime DeleteDate { get { return _deleteDate; } set { _deleteDate = value; } }
+        public DateTime DeleteDate { get { return _deleteDate; } set { _deleteDate = value; } }        
 
         private Status _status = Status.Active;
         public Status Status { get { return _status; } set { _status = value; } }

@@ -10,11 +10,10 @@ namespace BookProject.DAL.ORM.Entity
 
     {
         public string BookName { get; set; }
-        public string  BookDescription { get; set; }
-
+        public string  BookDescription { get; set; }        
+        public int BookQuantity { get; set; }
         public int CategoryID { get; set; }
         public virtual Category Category { get; set; }
-
         public int AppUserID { get; set; }
         public virtual AppUser AppUser { get; set; }
 
