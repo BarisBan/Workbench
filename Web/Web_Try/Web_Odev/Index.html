@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Boostrap Challange</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <style>
+        .navbar-nav{
+            color:aliceblue;
+        }
+        .d-block{
+            height:400px;
+        }
+        body {
+            background-image:url(Img/1200px-Hyades.jpg);
+            background-repeat:no-repeat;
+            background-attachment:fixed;
+            
+            
+        }
+        main {
+            border: 2px solid #191970;
+        }
+
+        /*.card-body{
+            background-color:cadetblue;
+                
+        }*/
+        .card {
+            padding: 0 !important;
+            background-color: #72a2cb;
+        }
+        card-img-top {
+            padding: 0 !important;
+                
+        }
+        
+        footer{
+            background-color:midnightblue;
+            color:white;
+        }
+
+    </style>
+</head>
+<body >
+
+    <main class="container p-3">
+        <header class="row justify-content-md-center h-100 m-1">
+            <div class="bd-example  ">
+                <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active ">
+                            <img src="Img/Lights_of_Dawn_Amy.jpg" class="d-block w-100"  alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>First slide label</h5>
+                                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="Img/MILKYWAY.jpg" class="d-block  w-100"  alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Second slide label</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="Img/Aurora.jpg" class="d-block  w-100"  alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Third slide label</h5>
+                                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <menu class="col-12 w-100">
+            <nav class="navbar navbar-expand-lg navbar-light" style="background-color:midnightblue; border-radius:3px; ">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link " onmousedown="Backround()" style="color:white" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color:white" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color:white" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" style="color:white" href="#">Disabled</a>
+                    </li>
+                </ul>
+            </nav>
+            </menu>
+
+            <content class="col-12 w-100 m-0">
+                <section class="row justify-content-md-center h-100 m-1">
+
+                    <div class="card col-3 text-center" style="width: 18rem;">
+                        <img class="card-img-top rounded-circle" src="Img/earth-moon.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card col-3 text-center" style="width: 18rem;">
+                        <img class="card-img-top rounded-circle" src="Img/earth-moon.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card col-3 text-center" style="width: 18rem;">
+                        <img class="card-img-top rounded-circle" src="Img/earth-moon.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card col-3 text-center" style="width: 18rem;">
+                        <img class="card-img-top rounded-circle" src="Img/earth-moon.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="row " style="background-color:#72a2cb">
+                    <section class="col-6 h-75 w-50">BlaBla</section>
+                    <section class="col-6 h-75 w-50">BlaBla</section>
+                </section>
+
+
+            </content>
+            <footer class="col-lg-12 h-50 text-center m-1 p-5">
+                &copy; Created by Barış
+
+            </footer>
+</main>
+
+    <script src="Scripts/jquery-3.3.1.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+</body>
+</html>
