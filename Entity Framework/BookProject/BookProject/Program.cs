@@ -1,4 +1,5 @@
 ﻿using BookProject.Views.Admin.AppUserView;
+using BookProject.Views.Admin.BookView;
 using BookProject.Views.Admin.CategoryView;
 using BookProject.Views.Admin.MasterView;
 using BookProject.Views.Member.MemberView;

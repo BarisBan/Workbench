@@ -28,43 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gbCtegories = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.gbCategories = new System.Windows.Forms.GroupBox();
+            this.cbCategory = new System.Windows.Forms.ComboBox();
             this.dgvBookList = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.gbBookList = new System.Windows.Forms.GroupBox();
+            this.gbAutors = new System.Windows.Forms.GroupBox();
+            this.cbAutors = new System.Windows.Forms.ComboBox();
+            this.txbBookName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.gbShopCart = new System.Windows.Forms.GroupBox();
             this.dgvShopCart = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
-            this.gbCtegories.SuspendLayout();
+            this.gbBookSearch = new System.Windows.Forms.GroupBox();
+            this.gbCategories.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookList)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.gbBookList.SuspendLayout();
+            this.gbAutors.SuspendLayout();
             this.gbShopCart.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShopCart)).BeginInit();
+            this.gbBookSearch.SuspendLayout();
             this.SuspendLayout();
             // 
-            // gbCtegories
+            // gbCategories
             // 
-            this.gbCtegories.Controls.Add(this.comboBox1);
-            this.gbCtegories.Location = new System.Drawing.Point(12, 12);
-            this.gbCtegories.Name = "gbCtegories";
-            this.gbCtegories.Size = new System.Drawing.Size(137, 59);
-            this.gbCtegories.TabIndex = 1;
-            this.gbCtegories.TabStop = false;
-            this.gbCtegories.Text = "Categories";
+            this.gbCategories.Controls.Add(this.cbCategory);
+            this.gbCategories.Location = new System.Drawing.Point(12, 12);
+            this.gbCategories.Name = "gbCategories";
+            this.gbCategories.Size = new System.Drawing.Size(137, 59);
+            this.gbCategories.TabIndex = 1;
+            this.gbCategories.TabStop = false;
+            this.gbCategories.Text = "Categories";
             // 
-            // comboBox1
+            // cbCategory
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(6, 19);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 2;
+            this.cbCategory.FormattingEnabled = true;
+            this.cbCategory.Location = new System.Drawing.Point(6, 19);
+            this.cbCategory.Name = "cbCategory";
+            this.cbCategory.Size = new System.Drawing.Size(121, 21);
+            this.cbCategory.TabIndex = 2;
+            this.cbCategory.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // dgvBookList
             // 
@@ -74,58 +77,60 @@
             this.dgvBookList.Size = new System.Drawing.Size(447, 167);
             this.dgvBookList.TabIndex = 2;
             // 
-            // groupBox1
+            // gbBookList
             // 
-            this.groupBox1.Controls.Add(this.dgvBookList);
-            this.groupBox1.Location = new System.Drawing.Point(8, 160);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(467, 207);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Book List";
+            this.gbBookList.Controls.Add(this.dgvBookList);
+            this.gbBookList.Location = new System.Drawing.Point(8, 160);
+            this.gbBookList.Name = "gbBookList";
+            this.gbBookList.Size = new System.Drawing.Size(467, 207);
+            this.gbBookList.TabIndex = 3;
+            this.gbBookList.TabStop = false;
+            this.gbBookList.Text = "Book List";
             // 
-            // groupBox2
+            // gbAutors
             // 
-            this.groupBox2.Controls.Add(this.comboBox3);
-            this.groupBox2.Location = new System.Drawing.Point(155, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(137, 59);
-            this.groupBox2.TabIndex = 5;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Autors";
+            this.gbAutors.Controls.Add(this.cbAutors);
+            this.gbAutors.Location = new System.Drawing.Point(155, 12);
+            this.gbAutors.Name = "gbAutors";
+            this.gbAutors.Size = new System.Drawing.Size(137, 59);
+            this.gbAutors.TabIndex = 5;
+            this.gbAutors.TabStop = false;
+            this.gbAutors.Text = "Autors";
             // 
-            // comboBox3
+            // cbAutors
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(6, 19);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 2;
+            this.cbAutors.FormattingEnabled = true;
+            this.cbAutors.Location = new System.Drawing.Point(6, 19);
+            this.cbAutors.Name = "cbAutors";
+            this.cbAutors.Size = new System.Drawing.Size(121, 21);
+            this.cbAutors.TabIndex = 2;
+            this.cbAutors.SelectedIndexChanged += new System.EventHandler(this.cbAutors_SelectedIndexChanged);
             // 
-            // textBox1
+            // txbBookName
             // 
-            this.textBox1.Location = new System.Drawing.Point(18, 109);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(131, 20);
-            this.textBox1.TabIndex = 6;
+            this.txbBookName.Location = new System.Drawing.Point(30, 32);
+            this.txbBookName.Name = "txbBookName";
+            this.txbBookName.Size = new System.Drawing.Size(131, 20);
+            this.txbBookName.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 93);
+            this.label1.Location = new System.Drawing.Point(33, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 13);
+            this.label1.Size = new System.Drawing.Size(63, 13);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Kitap İsmi";
+            this.label1.Text = "Book Name";
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(161, 107);
+            this.btnSearch.Location = new System.Drawing.Point(173, 30);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 8;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // gbShopCart
             // 
@@ -155,44 +160,57 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
+            // gbBookSearch
+            // 
+            this.gbBookSearch.Controls.Add(this.label1);
+            this.gbBookSearch.Controls.Add(this.txbBookName);
+            this.gbBookSearch.Controls.Add(this.btnSearch);
+            this.gbBookSearch.Location = new System.Drawing.Point(8, 77);
+            this.gbBookSearch.Name = "gbBookSearch";
+            this.gbBookSearch.Size = new System.Drawing.Size(284, 77);
+            this.gbBookSearch.TabIndex = 11;
+            this.gbBookSearch.TabStop = false;
+            this.gbBookSearch.Text = "Book Search";
+            // 
             // MemberPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(769, 391);
+            this.Controls.Add(this.gbBookSearch);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.gbShopCart);
-            this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.gbCtegories);
+            this.Controls.Add(this.gbAutors);
+            this.Controls.Add(this.gbBookList);
+            this.Controls.Add(this.gbCategories);
             this.Name = "MemberPage";
             this.Text = "MemberPage";
-            this.gbCtegories.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.MemberPage_Load);
+            this.gbCategories.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookList)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
+            this.gbBookList.ResumeLayout(false);
+            this.gbAutors.ResumeLayout(false);
             this.gbShopCart.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvShopCart)).EndInit();
+            this.gbBookSearch.ResumeLayout(false);
+            this.gbBookSearch.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.GroupBox gbCtegories;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.GroupBox gbCategories;
+        private System.Windows.Forms.ComboBox cbCategory;
         private System.Windows.Forms.DataGridView dgvBookList;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.GroupBox gbBookList;
+        private System.Windows.Forms.GroupBox gbAutors;
+        private System.Windows.Forms.ComboBox cbAutors;
+        private System.Windows.Forms.TextBox txbBookName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.GroupBox gbShopCart;
         private System.Windows.Forms.DataGridView dgvShopCart;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox gbBookSearch;
     }
 }

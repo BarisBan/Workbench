@@ -146,10 +146,9 @@ namespace BookProject.Views.Admin.BookView
                 Book book = new Book();
                 book.BookName = txtBookNameAdd.Text;
                 book.BookDescription = txtBookDescriptionAdd.Text;
-                book.CategoryID = (int)cmbBookCategoriesAdd.SelectedValue;
-                book.Category.CategoryName = cmbBookCategoriesAdd.SelectedText;
+                book.CategoryID = (int)cmbBookCategoriesAdd.SelectedValue;                
                 book.AppUserID = (int)cmbBookAddAuthor.SelectedValue;
-                book.AppUser.FullName = cmbBookAddAuthor.SelectedText;
+                
                 
                 book.Status = DAL.ORM.Enum.Status.Active;
                 book.AddDate = DateTime.Now;

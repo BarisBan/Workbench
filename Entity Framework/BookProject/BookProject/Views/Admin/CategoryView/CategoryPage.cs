@@ -45,6 +45,11 @@ namespace BookProject.Views.Admin.CategoryView
             }
         }
 
+
+        public void CategoryTakeList()
+        {
+            dataGridView1.DataSource = db.Categories.Where(x => x.Status == DAL.ORM.Enum.Status.Active || x.Status == DAL.ORM.Enum.Status.Updated).ToList();
+        }
         public bool EmptyCatcher(char _isCreateOrUpdate) //AppUserView deki Metotla aynı mantık.
         {
             bool i = false;
@@ -90,11 +95,6 @@ namespace BookProject.Views.Admin.CategoryView
                     break;
             }
             return i;
-        }
-
-        public void CategoryTakeList()
-        {
-            dataGridView1.DataSource = db.Categories.Where(x => x.Status == DAL.ORM.Enum.Status.Active || x.Status == DAL.ORM.Enum.Status.Updated).ToList();
         }
 
         private void btnCategoryAdd_Click(object sender, EventArgs e)
