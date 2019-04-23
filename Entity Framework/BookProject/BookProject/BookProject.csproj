@@ -58,6 +58,7 @@
     <Compile Include="DAL\ORM\Entity\BaseEntity.cs" />
     <Compile Include="DAL\ORM\Entity\Book.cs" />
     <Compile Include="DAL\ORM\Entity\Category.cs" />
+    <Compile Include="DAL\ORM\Entity\Order.cs" />
     <Compile Include="DAL\ORM\Enum\Gender.cs" />
     <Compile Include="DAL\ORM\Enum\Role.cs" />
     <Compile Include="DAL\ORM\Enum\Status.cs" />
@@ -88,6 +89,12 @@
     </Compile>
     <Compile Include="Views\Admin\MasterView\MasterPage.Designer.cs">
       <DependentUpon>MasterPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\OrderView\OrderPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\OrderView\OrderPage.Designer.cs">
+      <DependentUpon>OrderPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Member\MemberView\MemberPage.cs">
       <SubType>Form</SubType>
@@ -121,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Admin\MasterView\MasterPage.resx">
       <DependentUpon>MasterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Shared\OrderView\OrderPage.resx">
+      <DependentUpon>OrderPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Member\MemberView\MemberPage.resx">
       <DependentUpon>MemberPage.cs</DependentUpon>

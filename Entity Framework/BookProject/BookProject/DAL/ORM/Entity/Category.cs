@@ -11,5 +11,6 @@ namespace BookProject.DAL.ORM.Entity
         public string CategoryName { get; set; }
         public string Distription { get; set; }
         public virtual List<Book> Books { get; set; }
+        
     }
 }

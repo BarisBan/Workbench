@@ -72,5 +72,19 @@ namespace BookProject.Views.Member.MemberView
         {
             dgvBookList.DataSource = db.Books.Where(x => x.AppUser.FirstName == cbAutors.Text.Trim() || x.AppUser.LastName == cbAutors.Text.Trim()).ToList();
         }
+
+        private void DgvBookList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+
+            for (int i = 0; i < dgvBookList.Rows.Count; i++)
+            {
+                for (int j = 0; j < dgvBookList.Rows[i].Cells.Count; j++)
+                {
+                    dgvShopCart.Rows[i].Cells[j].Value = dgvBookList.Rows[i].Cells[j].Value;
+                }
+            }
+
+        }
     }
 }

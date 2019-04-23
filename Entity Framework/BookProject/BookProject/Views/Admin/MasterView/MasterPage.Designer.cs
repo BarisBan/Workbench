@@ -37,6 +37,7 @@
             this.userPanelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoryPanelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bookPanelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.shopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,7 +45,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.programToolStripMenuItem,
-            this.panelToolStripMenuItem});
+            this.panelToolStripMenuItem,
+            this.shopToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(708, 24);
@@ -115,6 +117,13 @@
             this.bookPanelToolStripMenuItem.Text = "Book Panel";
             this.bookPanelToolStripMenuItem.Click += new System.EventHandler(this.BookPanelToolStripMenuItem_Click);
             // 
+            // shopToolStripMenuItem
+            // 
+            this.shopToolStripMenuItem.Name = "shopToolStripMenuItem";
+            this.shopToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.shopToolStripMenuItem.Text = "Shop";
+            this.shopToolStripMenuItem.Click += new System.EventHandler(this.ShopToolStripMenuItem_Click);
+            // 
             // MasterPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -145,5 +154,6 @@
         internal System.Windows.Forms.ToolStripMenuItem categoryPanelToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem bookPanelToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem shopToolStripMenuItem;
     }
 }

@@ -1,6 +1,7 @@
 ﻿using BookProject.Views.Admin.AppUserView;
 using BookProject.Views.Admin.BookView;
 using BookProject.Views.Admin.CategoryView;
+using BookProject.Views.Member.MemberView;
 using BookProject.Views.Shared.LoginView;
 using System;
 using System.Collections.Generic;
@@ -34,7 +35,8 @@ namespace BookProject.Views.Admin.MasterView
 
         private void MasterPage_Load(object sender, EventArgs e)
         {
-
+            
+            
            
             
         }
@@ -60,6 +62,12 @@ namespace BookProject.Views.Admin.MasterView
         private void LogoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             panelToolStripMenuItem.Visible = false;
+        }
+
+        private void ShopToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MemberPage mbpage = new MemberPage();
+            mbpage.ShowDialog();
         }
     }
 }

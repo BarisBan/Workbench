@@ -74,8 +74,10 @@
             this.dgvBookList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBookList.Location = new System.Drawing.Point(6, 19);
             this.dgvBookList.Name = "dgvBookList";
+            this.dgvBookList.ReadOnly = true;
             this.dgvBookList.Size = new System.Drawing.Size(447, 167);
             this.dgvBookList.TabIndex = 2;
+            this.dgvBookList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvBookList_CellDoubleClick);
             // 
             // gbBookList
             // 
@@ -147,6 +149,7 @@
             this.dgvShopCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvShopCart.Location = new System.Drawing.Point(6, 19);
             this.dgvShopCart.Name = "dgvShopCart";
+            this.dgvShopCart.ReadOnly = true;
             this.dgvShopCart.Size = new System.Drawing.Size(188, 184);
             this.dgvShopCart.TabIndex = 0;
             // 

@@ -44,16 +44,30 @@ namespace BookProject.Views.Shared.LoginView
             return i;
         }
         private void BtnSignIn_Click(object sender, EventArgs e)
-        { // sayfa yönlendirmeleri yapılacak.
+        {
+
+           
+
 
             if (EmptyCatcher())
             {
                 if (db.AppUsers.Any(x => x.UserName == txtUserName.Text && x.Password == txtPassword.Text && x.Role == DAL.ORM.Enum.Role.Admin && (x.Status == DAL.ORM.Enum.Status.Active || x.Status == DAL.ORM.Enum.Status.Updated)))
                 {
-                    
-                    mp.panelToolStripMenuItem.Visible = true;
-                    mp.panelToolStripMenuItem.Enabled = true;
-                    mp.Show();
+
+                    foreach (MasterPage mp in Application.OpenForms.OfType<MasterPage>())
+                    {
+                        foreach (MenuStrip mst in mp.Controls.OfType<MenuStrip>())
+                        {
+                            if (mst.Name == "panelToolStripMenuItem")
+                            {
+                                mst.Visible = true;
+                                mst.Enabled = true;
+                            }
+                        }
+                    }
+                    //mp.panelToolStripMenuItem.Visible = true;
+                    //mp.panelToolStripMenuItem.Enabled = true;
+                    //mp.Show();
                     this.Hide();
 
                 }

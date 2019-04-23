@@ -22,7 +22,7 @@ namespace BookProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MemberPage());
+            Application.Run(new AppUserPage());
         }
     }
 }
