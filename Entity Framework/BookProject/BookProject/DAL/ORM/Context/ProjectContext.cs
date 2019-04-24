@@ -13,8 +13,8 @@ namespace BookProject.DAL.ORM.Context
     {
         public ProjectContext()
         {
-            Database.Connection.ConnectionString = @"Server=DESKTOP-SC03J1S\SQLEXPRESS;Database=Book;UID=sa;PWD=bjk.1403;";
-            //Database.Connection.ConnectionString = "Server=.;Database=Book;UID=sa;PWD=1234;";
+            //Database.Connection.ConnectionString = @"Server=DESKTOP-SC03J1S\SQLEXPRESS;Database=Book;UID=sa;PWD=bjk.1403;";
+            Database.Connection.ConnectionString = "Server=.;Database=Book;UID=sa;PWD=1234;";
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

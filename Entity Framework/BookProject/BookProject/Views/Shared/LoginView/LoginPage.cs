@@ -46,7 +46,7 @@ namespace BookProject.Views.Shared.LoginView
         private void BtnSignIn_Click(object sender, EventArgs e)
         {
 
-           
+
 
 
             if (EmptyCatcher())
@@ -56,12 +56,13 @@ namespace BookProject.Views.Shared.LoginView
 
                     foreach (MasterPage mp in Application.OpenForms.OfType<MasterPage>())
                     {
-                        foreach (MenuStrip mst in mp.Controls.OfType<MenuStrip>())
+                        foreach (ToolStrip tst in mp.Controls.OfType<ToolStrip>())
                         {
-                            if (mst.Name == "panelToolStripMenuItem")
+                            if(tst.Name== "menuStrip1")
                             {
-                                mst.Visible = true;
-                                mst.Enabled = true;
+                                tst.Enabled = true;
+                                tst.Visible = true;
+
                             }
                         }
                     }
@@ -71,16 +72,16 @@ namespace BookProject.Views.Shared.LoginView
                     this.Hide();
 
                 }
-                else if (db.AppUsers.Any(x => x.UserName == txtUserName.Text && x.Password == txtPassword.Text && x.Role == DAL.ORM.Enum.Role.Member && ( x.Status == DAL.ORM.Enum.Status.Active )))
+                else if (db.AppUsers.Any(x => x.UserName == txtUserName.Text && x.Password == txtPassword.Text && x.Role == DAL.ORM.Enum.Role.Member && (x.Status == DAL.ORM.Enum.Status.Active)))
                 {
-                    
+
                     mp.panelToolStripMenuItem.Visible = false;
                     mp.Show();
                     this.Hide();
 
 
                 }
-                else if (db.AppUsers.Any(x => x.UserName == txtUserName.Text && x.Password == txtPassword.Text && x.Role == DAL.ORM.Enum.Role.Employee  && (x.Status == DAL.ORM.Enum.Status.Active || x.Status == DAL.ORM.Enum.Status.Updated)))
+                else if (db.AppUsers.Any(x => x.UserName == txtUserName.Text && x.Password == txtPassword.Text && x.Role == DAL.ORM.Enum.Role.Employee && (x.Status == DAL.ORM.Enum.Status.Active || x.Status == DAL.ORM.Enum.Status.Updated)))
                 {
                     mp.panelToolStripMenuItem.Enabled = true;
                     mp.userPanelToolStripMenuItem.Visible = false;
@@ -105,7 +106,7 @@ namespace BookProject.Views.Shared.LoginView
                 MessageBox.Show("Lütfen ilgili alanları boş bırakmayınız...!!!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-        
+
         private void LoginPage_Load(object sender, EventArgs e)
         {
             txtUserName.Text = "DKadir";

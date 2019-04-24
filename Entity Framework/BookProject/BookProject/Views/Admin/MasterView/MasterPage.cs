@@ -61,7 +61,7 @@ namespace BookProject.Views.Admin.MasterView
 
         private void LogoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            panelToolStripMenuItem.Visible = false;
+            this.Refresh();
         }
 
         private void ShopToolStripMenuItem_Click(object sender, EventArgs e)
