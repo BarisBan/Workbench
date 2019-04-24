@@ -19,7 +19,7 @@ namespace BookProject.Views.Shared.LoginView
         {
             InitializeComponent();
         }
-        ProjectContext db = new ProjectContext();        
+        ProjectContext db = new ProjectContext();
 
         public bool EmptyCatcher() // Bu metodun amacı butona tıklandığında eğer boş bir textbox varsa hata mesajı çıkarsın.
         {
@@ -57,7 +57,7 @@ namespace BookProject.Views.Shared.LoginView
                     {
                         foreach (MenuStrip tst in mp.Controls.OfType<MenuStrip>())
                         {
-                            if(tst.Name == "menuStrip1")
+                            if (tst.Name == "menuStrip1")
                             {
                                 tst.Items[1].Visible = true;
                                 tst.Items[1].Enabled = true;
@@ -65,7 +65,7 @@ namespace BookProject.Views.Shared.LoginView
                             }
                         }
                     }
-                    this.Close();                   
+                    this.Close();
 
                 }
                 else if (db.AppUsers.Any(x => x.UserName == txtUserName.Text && x.Password == txtPassword.Text && x.Role == DAL.ORM.Enum.Role.Member && (x.Status == DAL.ORM.Enum.Status.Active)))
@@ -81,7 +81,7 @@ namespace BookProject.Views.Shared.LoginView
                                 tst.Items[2].Enabled = true;
                             }
                         }
-                    }                    
+                    }
                     this.Close();
 
                 }
@@ -94,9 +94,9 @@ namespace BookProject.Views.Shared.LoginView
                         {
                             if (tst.Name == "menuStrip1")
                             {
-                                 tst.Items[1].Visible = true;
-                                 tst.Items[1].Enabled = true;
-                               
+                                tst.Items[1].Visible = true;
+                                tst.Items[1].Enabled = true;
+
                             }
                         }
                     }
@@ -106,6 +106,7 @@ namespace BookProject.Views.Shared.LoginView
                     //mp.categoryPanelToolStripMenuItem.Enabled = true;
                     //mp.bookPanelToolStripMenuItem.Enabled = true;
                     //mp.Show();
+
                     this.Close();
                 }
                 else if (db.AppUsers.Any(x => x.UserName == txtUserName.Text && x.Password == txtPassword.Text && x.Role == DAL.ORM.Enum.Role.Author || (x.Status == DAL.ORM.Enum.Status.Active || x.Status == DAL.ORM.Enum.Status.Updated)))
@@ -117,7 +118,8 @@ namespace BookProject.Views.Shared.LoginView
                             if (tst.Name == "menuStrip1")
                             {
                                 tst.Items[1].Visible = true;
-                                tst.Items[1].Enabled = true;
+                                tst.Items[1].Enabled = true;                              
+
                             }
                         }
                     }
@@ -125,6 +127,7 @@ namespace BookProject.Views.Shared.LoginView
                     //mp.userPanelToolStripMenuItem.Visible = false;
                     //mp.categoryPanelToolStripMenuItem.Enabled = false;
                     //mp.bookPanelToolStripMenuItem.Enabled = true;
+                    this.Close();
                 }
                 else
                 {
