@@ -19,8 +19,7 @@ namespace BookProject.Views.Shared.LoginView
         {
             InitializeComponent();
         }
-        ProjectContext db = new ProjectContext();
-        MasterPage mp = new MasterPage();
+        ProjectContext db = new ProjectContext();        
 
         public bool EmptyCatcher() // Bu metodun amacı butona tıklandığında eğer boş bir textbox varsa hata mesajı çıkarsın.
         {
@@ -56,45 +55,76 @@ namespace BookProject.Views.Shared.LoginView
 
                     foreach (MasterPage mp in Application.OpenForms.OfType<MasterPage>())
                     {
-                        foreach (ToolStrip tst in mp.Controls.OfType<ToolStrip>())
+                        foreach (MenuStrip tst in mp.Controls.OfType<MenuStrip>())
                         {
-                            if(tst.Name== "menuStrip1")
+                            if(tst.Name == "menuStrip1")
                             {
-                                tst.Enabled = true;
-                                tst.Visible = true;
-
+                                tst.Items[1].Visible = true;
+                                tst.Items[1].Enabled = true;
+                                tst.Items[2].Enabled = true;
                             }
                         }
                     }
-                    //mp.panelToolStripMenuItem.Visible = true;
-                    //mp.panelToolStripMenuItem.Enabled = true;
-                    //mp.Show();
-                    this.Hide();
+                    this.Close();                   
 
                 }
                 else if (db.AppUsers.Any(x => x.UserName == txtUserName.Text && x.Password == txtPassword.Text && x.Role == DAL.ORM.Enum.Role.Member && (x.Status == DAL.ORM.Enum.Status.Active)))
                 {
-
-                    mp.panelToolStripMenuItem.Visible = false;
-                    mp.Show();
-                    this.Hide();
-
+                    foreach (MasterPage mp in Application.OpenForms.OfType<MasterPage>())
+                    {
+                        foreach (MenuStrip tst in mp.Controls.OfType<MenuStrip>())
+                        {
+                            if (tst.Name == "menuStrip1")
+                            {
+                                tst.Items[1].Visible = false;
+                                tst.Items[1].Enabled = false;
+                                tst.Items[2].Enabled = true;
+                            }
+                        }
+                    }                    
+                    this.Close();
 
                 }
                 else if (db.AppUsers.Any(x => x.UserName == txtUserName.Text && x.Password == txtPassword.Text && x.Role == DAL.ORM.Enum.Role.Employee && (x.Status == DAL.ORM.Enum.Status.Active || x.Status == DAL.ORM.Enum.Status.Updated)))
                 {
-                    mp.panelToolStripMenuItem.Enabled = true;
-                    mp.userPanelToolStripMenuItem.Visible = false;
-                    mp.categoryPanelToolStripMenuItem.Enabled = true;
-                    mp.bookPanelToolStripMenuItem.Enabled = true;
-                    mp.Show();
+
+                    foreach (MasterPage mp in Application.OpenForms.OfType<MasterPage>())
+                    {
+                        foreach (MenuStrip tst in mp.Controls.OfType<MenuStrip>())
+                        {
+                            if (tst.Name == "menuStrip1")
+                            {
+                                 tst.Items[1].Visible = true;
+                                 tst.Items[1].Enabled = true;
+                               
+                            }
+                        }
+                    }
+
+                    //mp.panelToolStripMenuItem.Enabled = true;
+                    //mp.userPanelToolStripMenuItem.Visible = false;
+                    //mp.categoryPanelToolStripMenuItem.Enabled = true;
+                    //mp.bookPanelToolStripMenuItem.Enabled = true;
+                    //mp.Show();
+                    this.Close();
                 }
                 else if (db.AppUsers.Any(x => x.UserName == txtUserName.Text && x.Password == txtPassword.Text && x.Role == DAL.ORM.Enum.Role.Author || (x.Status == DAL.ORM.Enum.Status.Active || x.Status == DAL.ORM.Enum.Status.Updated)))
                 {
-                    mp.panelToolStripMenuItem.Enabled = true;
-                    mp.userPanelToolStripMenuItem.Visible = false;
-                    mp.categoryPanelToolStripMenuItem.Enabled = false;
-                    mp.bookPanelToolStripMenuItem.Enabled = true;
+                    foreach (MasterPage mp in Application.OpenForms.OfType<MasterPage>())
+                    {
+                        foreach (MenuStrip tst in mp.Controls.OfType<MenuStrip>())
+                        {
+                            if (tst.Name == "menuStrip1")
+                            {
+                                tst.Items[1].Visible = true;
+                                tst.Items[1].Enabled = true;
+                            }
+                        }
+                    }
+                    //mp.panelToolStripMenuItem.Enabled = true;
+                    //mp.userPanelToolStripMenuItem.Visible = false;
+                    //mp.categoryPanelToolStripMenuItem.Enabled = false;
+                    //mp.bookPanelToolStripMenuItem.Enabled = true;
                 }
                 else
                 {
