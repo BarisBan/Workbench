@@ -4,6 +4,7 @@ using BookProject.Views.Admin.CategoryView;
 using BookProject.Views.Admin.MasterView;
 using BookProject.Views.Member.MemberView;
 using BookProject.Views.Shared.LoginView;
+using BookProject.Views.Shared.MainView;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +23,7 @@ namespace BookProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MasterPage());
+            Application.Run(new MainPage());
         }
     }
 }

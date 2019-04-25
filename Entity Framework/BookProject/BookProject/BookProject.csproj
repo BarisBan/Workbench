@@ -90,6 +90,12 @@
     <Compile Include="Views\Admin\MasterView\MasterPage.Designer.cs">
       <DependentUpon>MasterPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Shared\MainView\MainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\MainView\MainPage.Designer.cs">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Shared\OrderView\OrderPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Admin\MasterView\MasterPage.resx">
       <DependentUpon>MasterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Shared\MainView\MainPage.resx">
+      <DependentUpon>MainPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Shared\OrderView\OrderPage.resx">
       <DependentUpon>OrderPage.cs</DependentUpon>
