@@ -25,6 +25,7 @@ namespace BookProject.DAL.ORM.Context
         public DbSet<AppUser> AppUsers { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Book> Books { get; set; }
+        public DbSet<Order> Orders { get; set; }
     }
 
     
