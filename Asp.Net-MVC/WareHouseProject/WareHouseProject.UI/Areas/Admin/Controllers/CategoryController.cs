@@ -91,6 +91,7 @@ namespace WareHouseProject.UI.Areas.Admin.Controllers
             }
         }
 
+        
         public ActionResult DeleteCategory(int id)
         {
             Category category = db.Categories.FirstOrDefault(x => x.ID == id);
