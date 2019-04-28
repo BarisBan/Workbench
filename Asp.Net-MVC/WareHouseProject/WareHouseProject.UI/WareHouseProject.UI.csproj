@@ -126,6 +126,9 @@
     <Compile Include="Areas\Admin\Models\DTO\ProductDTO.cs" />
     <Compile Include="Areas\Admin\Models\DTO\UserDTO.cs" />
     <Compile Include="Areas\Admin\Models\VM\AddProductVM.cs" />
+    <Compile Include="Areas\Customer\Controllers\CustomerHomeController.cs" />
+    <Compile Include="Areas\Customer\CustomerAreaRegistration.cs" />
+    <Compile Include="Areas\Employee\Controllers\EmployeeHomeController.cs" />
     <Compile Include="Areas\Employee\EmployeeAreaRegistration.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -164,6 +167,11 @@
     <Content Include="Areas\Admin\Views\Account\UserLogin.cshtml" />
     <Content Include="Areas\Admin\Views\AppUser\UserList.cshtml" />
     <Content Include="Areas\Admin\Views\AppUser\UpdateUser.cshtml" />
+    <Content Include="Areas\Employee\Views\Shared\_EmployeeLayoutPage.cshtml" />
+    <Content Include="Areas\Employee\Views\EmployeeHome\EmployeeHomeIndex.cshtml" />
+    <Content Include="Areas\Customer\Views\web.config" />
+    <Content Include="Areas\Customer\Views\Shared\_CustomerLayoutPage.cshtml" />
+    <Content Include="Areas\Customer\Views\CustomerHome\CustomerHomeIndex.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Shared\FormMessage.cshtml" />
     <None Include="Web.Debug.config">
@@ -177,9 +185,8 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Account\" />
     <Folder Include="Areas\Admin\Views\Base\" />
-    <Folder Include="Areas\Employee\Controllers\" />
+    <Folder Include="Areas\Customer\Models\" />
     <Folder Include="Areas\Employee\Models\" />
-    <Folder Include="Areas\Employee\Views\Shared\" />
     <Folder Include="Content\Images\" />
     <Folder Include="Controllers\" />
   </ItemGroup>
