@@ -17,7 +17,7 @@ namespace WareHouseProject.UI.Areas.Admin.Controllers
             {
                 ID = x.ID,
                 CategoryName = x.CategoryName,
-                Description = x.Description
+                Description = x.CategoryDescription
             }
             ).ToList();
 
@@ -37,18 +37,19 @@ namespace WareHouseProject.UI.Areas.Admin.Controllers
             {
                 Category category = new Category();
                 category.CategoryName = model.CategoryName;
-                category.Description = model.Description;
-                category.Status = Model.Enum.Status.Active;
-                category.AddDate = DateTime.Now;
+                category.CategoryDescription = model.Description;                
+                
                 db.Categories.Add(category);
+                ViewBag.ProcessCondition = 1 ;
                 db.SaveChanges();
 
-                
-                return Redirect("CategoryList");
+
+                return View();
             }
             else
             {
-            return View();
+                ViewBag.ProcessCondition = 0 ;
+                return View();
             }
         }
 
@@ -60,7 +61,7 @@ namespace WareHouseProject.UI.Areas.Admin.Controllers
                 CategoryDTO model = new CategoryDTO();
                 model.ID = category.ID;
                 model.CategoryName = category.CategoryName;
-                model.Description = category.Description;
+                model.Description = category.CategoryDescription;
 
                 return View(model);
             }
@@ -77,13 +78,13 @@ namespace WareHouseProject.UI.Areas.Admin.Controllers
                 Category category = db.Categories.FirstOrDefault(x => x.ID == model.ID);
 
                 category.CategoryName = model.CategoryName;
-                category.Description = model.Description;
+                category.CategoryDescription = model.Description;
                 category.Status = Model.Enum.Status.Updated;
-                category.UpdateDate = DateTime.Now;                
+                category.UpdateDate = DateTime.Now;
 
                 db.SaveChanges();
 
-                return Redirect("CategoryList");
+                return Redirect("/Admin/Category/CategoryList");
             }
             else
             {
@@ -91,17 +92,18 @@ namespace WareHouseProject.UI.Areas.Admin.Controllers
             }
         }
 
-        
+
         public ActionResult DeleteCategory(int id)
         {
-            Category category = db.Categories.FirstOrDefault(x => x.ID == id);
-            category.Status = Model.Enum.Status.Deleted;
-            category.DeleteDate = DateTime.Now;
-
-            db.SaveChanges();
-
-            return Redirect("CategoryList");
-
+            if (ModelState.IsValid)
+            {
+                Category category = db.Categories.FirstOrDefault(x => x.ID == id);
+                category.Status = WareHouseProject.Model.Enum.Status.Deleted;
+                category.DeleteDate = DateTime.Now;
+                db.SaveChanges();
+                return Redirect("/Admin/Category/CategoryList");
+            }
+            return Redirect("/Admin/Category/CategoryList");
         }
 
     }

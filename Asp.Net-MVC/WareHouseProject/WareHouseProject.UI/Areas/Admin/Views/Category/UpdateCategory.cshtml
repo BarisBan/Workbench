@@ -1,18 +1,13 @@
 ﻿
 @{
-                /**/
+    /**/
 
-                ViewBag.Title = "UpdateCategory";
-                Layout = "~/Areas/Admin/Views/Shared/_AdminLayoutPage.cshtml";
+    ViewBag.Title = "UpdateCategory";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayoutPage.cshtml";
 }
 @model WareHouseProject.UI.Areas.Admin.Models.DTO.CategoryDTO
 
-<section class="content-header">
-    <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
-        <li class="active">Update Category</li>
-    </ol>
-</section>
+@Html.Partial("Partial/SectionForm")
 
 <section class="content">
     <div class="row">
@@ -35,6 +30,9 @@
                     <input type="text" style="visibility:hidden" name="ID" value="@Model.ID" />
                     <div class="box-footer">
                         <button type="submit" class="btn btn-primary">Submit</button>
+                        <div class="col-md-offset-2" style="float:right">
+                            <a href="/Admin/Category/CategoryList" class="btn btn-block btn-default">Category List</a>
+                        </div>
                     </div>
                 </form>
             </div>

@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "UserList";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayoutPage.cshtml";
+}
+@model List<WareHouseProject.UI.Areas.Admin.Models.DTO.UserDTO>
+
+<section class="content-header">
+    <ol class="breadcrumb bg-gray-active">
+        <li><a href="/Admin/Home/AdminHomeIndex"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="/Admin/AppUser/AddUser">Add User</a></li>
+        <li class="active">User List</li>
+    </ol>
+</section>
+<br />
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">List of Users</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="example2" class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>E-Mail</th>
+                                <th>User Name</th>
+                                <th>Gender</th>
+                                <th>Role</th>  
+                                <th>Update</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.FirstName</td>
+                                    <td>@item.LastName</td>
+                                    <td>@item.Email</td>
+                                    <td>@item.UserName</td>
+                                    <td>@item.Gender</td>
+                                    <td>@item.Role</td>
+                                    <td><a href="/Admin/AppUser/UpdateUser/@item.ID" type="button" class="btn btn-block btn-warning">Update</a></td>
+                                    <td><a href="/Admin/AppUser/DeleteUser/@item.ID" type="button" class="btn btn-block btn-danger">Delete</a></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    <a href="/Admin/AppUser/AddUser" type="button" style="float:right" class="btn btn-block btn-success">Create Product</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>

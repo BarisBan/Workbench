@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewBag.Title = "ProductList";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayoutPage.cshtml";
+}
+
+@model List<WareHouseProject.UI.Areas.Admin.Models.DTO.ProductDTO>
+
+<section class="content-header">
+    <ol class="breadcrumb bg-gray-active">
+        <li><a href="/Admin/Home/AdminHomeIndex"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="/Admin/Product/AddProduct">Add Product</a></li>
+        <li class="active">Product List</li>
+    </ol>
+</section>
+<br />
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">List of Products</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="example2" class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Description</th>
+                                <th>Unit Price</th>
+                                <th>Unit In Stock</th>
+                                <th>Category Name</th>
+                                <th>Update</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.ProductName</td>
+                                    <td>@item.Description</td>
+                                    <td>@item.UnitPrice</td>
+                                    <td>@item.UnitStock</td>
+                                    <td>@item.CategoryName</td>
+                                    <td><a href="/Admin/Product/UpdateProduct/@item.ID" type="button" class="btn btn-block btn-warning">Update</a></td>
+                                    <td><a href="/Admin/Product/DeleteProduct/@item.ID" type="button" class="btn btn-block btn-danger">Delete</a></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    <a href="/Admin/Product/AddProduct" type="button" style="float:right" class="btn btn-block btn-success">Create Product</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+$(function () {
+        $('#example1').DataTable()
+        $('#example2').DataTable({
+            'paging': true,
+            'lengthChange': false,
+            'searching': false,
+            'ordering': true,
+            'info': true,
+            'autoWidth': false
+        })
+    })</script>

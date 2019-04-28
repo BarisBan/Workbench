@@ -5,6 +5,10 @@
 }
 @model List<WareHouseProject.UI.Areas.Admin.Models.DTO.CategoryDTO>
 
+
+@Html.Partial("Partial/SectionForm")
+<br />
+<br />
 <section class="content">
     <div class="row">
         <div class="col-xs-12">
@@ -37,6 +41,7 @@
                                         }
                                     </tbody>
                                 </table>
+                                <a href="/Admin/Category/AddCategory" type="button" style="float:right" class="btn btn-block btn-success">Create Category</a>
                             </div>
                         </div>
                     </div>

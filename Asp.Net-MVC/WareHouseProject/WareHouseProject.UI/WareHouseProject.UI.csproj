@@ -114,15 +114,24 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\AccountController.cs" />
+    <Compile Include="Areas\Admin\Controllers\AppUserController.cs" />
     <Compile Include="Areas\Admin\Controllers\BaseController.cs" />
     <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
     <Compile Include="Areas\Admin\Models\DTO\BaseDTO.cs" />
     <Compile Include="Areas\Admin\Models\DTO\CategoryDTO.cs" />
+    <Compile Include="Areas\Admin\Models\DTO\LoginDTO.cs" />
+    <Compile Include="Areas\Admin\Models\DTO\ProductDTO.cs" />
+    <Compile Include="Areas\Admin\Models\DTO\UserDTO.cs" />
+    <Compile Include="Areas\Admin\Models\VM\AddProductVM.cs" />
     <Compile Include="Areas\Employee\EmployeeAreaRegistration.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Attributes\LoginControl.cs" />
+    <Compile Include="Models\Message\TransactionMessage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -146,8 +155,17 @@
     <Content Include="Areas\Admin\Views\Category\CategoryList.cshtml" />
     <Content Include="Areas\Admin\Views\Category\AddCategory.cshtml" />
     <Content Include="Areas\Admin\Views\Category\UpdateCategory.cshtml" />
-    <Content Include="Areas\Admin\Views\Category\DeleteCategory.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\Partial\SectionForm.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\Partial\CategoryForm.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\AddProduct.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\ProductList.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\UpdateProduct.cshtml" />
+    <Content Include="Areas\Admin\Views\AppUser\AddUser.cshtml" />
+    <Content Include="Areas\Admin\Views\Account\UserLogin.cshtml" />
+    <Content Include="Areas\Admin\Views\AppUser\UserList.cshtml" />
+    <Content Include="Areas\Admin\Views\AppUser\UpdateUser.cshtml" />
     <None Include="packages.config" />
+    <Content Include="Views\Shared\FormMessage.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -157,13 +175,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Account\" />
     <Folder Include="Areas\Admin\Views\Base\" />
     <Folder Include="Areas\Employee\Controllers\" />
     <Folder Include="Areas\Employee\Models\" />
     <Folder Include="Areas\Employee\Views\Shared\" />
     <Folder Include="Content\Images\" />
     <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WareHouseProject.DAT\WareHouseProject.DAT.csproj">
