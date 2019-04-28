@@ -28,134 +28,108 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.programToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.userPanelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.categoryPanelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bookPanelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.shopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.gbSortDate = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.gbSortDate.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // dataGridView1
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.programToolStripMenuItem,
-            this.panelToolStripMenuItem,
-            this.shopToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(708, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 184);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(861, 146);
+            this.dataGridView1.TabIndex = 0;
             // 
-            // programToolStripMenuItem
+            // dateTimePicker1
             // 
-            this.programToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.loginToolStripMenuItem,
-            this.logoutToolStripMenuItem,
-            this.exitToolStripMenuItem});
-            this.programToolStripMenuItem.Name = "programToolStripMenuItem";
-            this.programToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.programToolStripMenuItem.Text = "Program";
+            this.dateTimePicker1.Location = new System.Drawing.Point(81, 19);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 1;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
-            // loginToolStripMenuItem
+            // dateTimePicker2
             // 
-            this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
-            this.loginToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.loginToolStripMenuItem.Text = "Login";
-            this.loginToolStripMenuItem.Click += new System.EventHandler(this.LoginToolStripMenuItem_Click);
+            this.dateTimePicker2.Location = new System.Drawing.Point(81, 57);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker2.TabIndex = 2;
+            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
-            // logoutToolStripMenuItem
+            // gbSortDate
             // 
-            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.logoutToolStripMenuItem.Text = "Logout";
-            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.LogoutToolStripMenuItem_Click);
+            this.gbSortDate.Controls.Add(this.label2);
+            this.gbSortDate.Controls.Add(this.label1);
+            this.gbSortDate.Controls.Add(this.dateTimePicker1);
+            this.gbSortDate.Controls.Add(this.dateTimePicker2);
+            this.gbSortDate.Location = new System.Drawing.Point(12, 12);
+            this.gbSortDate.Name = "gbSortDate";
+            this.gbSortDate.Size = new System.Drawing.Size(314, 135);
+            this.gbSortDate.TabIndex = 3;
+            this.gbSortDate.TabStop = false;
+            this.gbSortDate.Text = "Sorting By Date";
             // 
-            // exitToolStripMenuItem
+            // label1
             // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(14, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Start Date :";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // panelToolStripMenuItem
+            // label2
             // 
-            this.panelToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.userPanelToolStripMenuItem,
-            this.categoryPanelToolStripMenuItem,
-            this.bookPanelToolStripMenuItem});
-            this.panelToolStripMenuItem.Enabled = false;
-            this.panelToolStripMenuItem.Name = "panelToolStripMenuItem";
-            this.panelToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
-            this.panelToolStripMenuItem.Text = "Panels";
-            this.panelToolStripMenuItem.Visible = false;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(14, 63);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(58, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "End Date :";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // userPanelToolStripMenuItem
+            // groupBox1
             // 
-            this.userPanelToolStripMenuItem.Name = "userPanelToolStripMenuItem";
-            this.userPanelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.userPanelToolStripMenuItem.Text = "User Panel";
-            this.userPanelToolStripMenuItem.Click += new System.EventHandler(this.UserPanelToolStripMenuItem_Click);
-            // 
-            // categoryPanelToolStripMenuItem
-            // 
-            this.categoryPanelToolStripMenuItem.Name = "categoryPanelToolStripMenuItem";
-            this.categoryPanelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.categoryPanelToolStripMenuItem.Text = "Category Panel";
-            this.categoryPanelToolStripMenuItem.Click += new System.EventHandler(this.CategoryPanelToolStripMenuItem_Click);
-            // 
-            // bookPanelToolStripMenuItem
-            // 
-            this.bookPanelToolStripMenuItem.Name = "bookPanelToolStripMenuItem";
-            this.bookPanelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.bookPanelToolStripMenuItem.Text = "Book Panel";
-            this.bookPanelToolStripMenuItem.Click += new System.EventHandler(this.BookPanelToolStripMenuItem_Click);
-            // 
-            // shopToolStripMenuItem
-            // 
-            this.shopToolStripMenuItem.Enabled = false;
-            this.shopToolStripMenuItem.Name = "shopToolStripMenuItem";
-            this.shopToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
-            this.shopToolStripMenuItem.Text = "Shop";
-            this.shopToolStripMenuItem.Click += new System.EventHandler(this.ShopToolStripMenuItem_Click);
+            this.groupBox1.Location = new System.Drawing.Point(332, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 135);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Sorting By Name";
             // 
             // MasterPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(708, 393);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.ClientSize = new System.Drawing.Size(885, 342);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gbSortDate);
+            this.Controls.Add(this.dataGridView1);
             this.Name = "MasterPage";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MasterPage";
-            this.Load += new System.EventHandler(this.MasterPage_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.gbSortDate.ResumeLayout(false);
+            this.gbSortDate.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem programToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem userPanelToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem categoryPanelToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem bookPanelToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem shopToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem panelToolStripMenuItem;
-        internal System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.TextBox textBox1;
+
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.GroupBox gbSortDate;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

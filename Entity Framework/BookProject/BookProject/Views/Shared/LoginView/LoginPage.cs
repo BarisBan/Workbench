@@ -1,5 +1,6 @@
 ﻿using BookProject.DAL.ORM.Context;
 using BookProject.Views.Admin.MasterView;
+using BookProject.Views.Shared.MainView;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -53,7 +54,7 @@ namespace BookProject.Views.Shared.LoginView
                 if (db.AppUsers.Any(x => x.UserName == txtUserName.Text && x.Password == txtPassword.Text && x.Role == DAL.ORM.Enum.Role.Admin && (x.Status == DAL.ORM.Enum.Status.Active || x.Status == DAL.ORM.Enum.Status.Updated)))
                 {
 
-                    foreach (MasterPage mp in Application.OpenForms.OfType<MasterPage>())
+                    foreach (MainPage mp in Application.OpenForms.OfType<MainPage>())
                     {
                         foreach (MenuStrip tst in mp.Controls.OfType<MenuStrip>())
                         {
@@ -70,7 +71,7 @@ namespace BookProject.Views.Shared.LoginView
                 }
                 else if (db.AppUsers.Any(x => x.UserName == txtUserName.Text && x.Password == txtPassword.Text && x.Role == DAL.ORM.Enum.Role.Member && (x.Status == DAL.ORM.Enum.Status.Active)))
                 {
-                    foreach (MasterPage mp in Application.OpenForms.OfType<MasterPage>())
+                    foreach (MainPage mp in Application.OpenForms.OfType<MainPage>())
                     {
                         foreach (MenuStrip tst in mp.Controls.OfType<MenuStrip>())
                         {
@@ -88,7 +89,7 @@ namespace BookProject.Views.Shared.LoginView
                 else if (db.AppUsers.Any(x => x.UserName == txtUserName.Text && x.Password == txtPassword.Text && x.Role == DAL.ORM.Enum.Role.Employee && (x.Status == DAL.ORM.Enum.Status.Active || x.Status == DAL.ORM.Enum.Status.Updated)))
                 {
 
-                    foreach (MasterPage mp in Application.OpenForms.OfType<MasterPage>())
+                    foreach (MainPage mp in Application.OpenForms.OfType<MainPage>())
                     {
                         foreach (MenuStrip tst in mp.Controls.OfType<MenuStrip>())
                         {
@@ -111,14 +112,14 @@ namespace BookProject.Views.Shared.LoginView
                 }
                 else if (db.AppUsers.Any(x => x.UserName == txtUserName.Text && x.Password == txtPassword.Text && x.Role == DAL.ORM.Enum.Role.Author || (x.Status == DAL.ORM.Enum.Status.Active || x.Status == DAL.ORM.Enum.Status.Updated)))
                 {
-                    foreach (MasterPage mp in Application.OpenForms.OfType<MasterPage>())
+                    foreach (MainPage mp in Application.OpenForms.OfType<MainPage>())
                     {
                         foreach (MenuStrip tst in mp.Controls.OfType<MenuStrip>())
                         {
                             if (tst.Name == "menuStrip1")
                             {
                                 tst.Items[1].Visible = true;
-                                tst.Items[1].Enabled = true;                              
+                                tst.Items[1].Enabled = true;             
 
                             }
                         }
